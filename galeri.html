@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Proyek - PT. Adijaya Multijasa Solution</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
+
+  <!-- NAVBAR -->
+  <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="bg-[#0b2830] text-white font-extrabold text-xl px-3 py-2 rounded">AMS</div>
+        <div class="flex flex-col leading-tight">
+          <span class="font-extrabold text-gray-900 text-sm tracking-wide">PT. ADIJAYA</span>
+          <span class="font-extrabold text-gray-900 text-sm tracking-wide">MULTIJASA</span>
+          <span class="text-[10px] text-gray-500 font-semibold tracking-widest">SOLUTION</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="index.html" class="text-gray-600 hover:text-[#0d9488] transition">Beranda</a>
+        <a href="tentang-kami.html" class="text-gray-600 hover:text-[#0d9488] transition">Tentang Kami</a>
+        <a href="layanan.html" class="text-gray-600 hover:text-[#0d9488] transition">Layanan</a>
+        <a href="client.html" class="text-gray-600 hover:text-[#0d9488] transition">Client</a>
+        <a href="galeri.html" class="text-[#0d9488] font-bold border-b-2 border-[#0d9488] pb-1">Galeri</a>
+      </nav>
+      <a href="#" class="bg-[#0d9488] hover:bg-[#0f766e] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">Hubungi Kami</a>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-gray-50 border-b border-gray-100 py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-xs font-bold text-[#0d9488] uppercase tracking-wider mb-2">PORTOFOLIO KERJA</p>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900">Galeri Proyek</h1>
+      <p class="text-gray-500 text-sm mt-2 max-w-2xl">Dokumentasi hasil pengerjaan proyek konstruksi, manufaktur, dan pemeliharaan terkini.</p>
+    </div>
+  </section>
+
+  <!-- MAIN GALLERY -->
+  <main class="flex-grow max-w-7xl mx-auto px-6 py-12">
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Image Card 1 -->
+      <div class="group relative overflow-hidden rounded-xl bg-gray-100 shadow-sm border border-gray-100">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Proyek Konstruksi" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+        <div class="p-4 bg-white">
+          <span class="text-[10px] font-bold text-[#0d9488] uppercase">Konstruksi</span>
+          <h3 class="font-bold text-gray-900 text-sm mt-1">Pembangunan Gedung Industri</h3>
+        </div>
+      </div>
+
+      <!-- Image Card 2 -->
+      <div class="group relative overflow-hidden rounded-xl bg-gray-100 shadow-sm border border-gray-100">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Proyek Manufaktur" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+        <div class="p-4 bg-white">
+          <span class="text-[10px] font-bold text-[#0d9488] uppercase">Manufaktur</span>
+          <h3 class="font-bold text-gray-900 text-sm mt-1">Fabrikasi Komponen Otomasi</h3>
+        </div>
+      </div>
+
+      <!-- Image Card 3 -->
+      <div class="group relative overflow-hidden rounded-xl bg-gray-100 shadow-sm border border-gray-100">
+        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Proyek Pemeliharaan" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+        <div class="p-4 bg-white">
+          <span class="text-[10px] font-bold text-[#0d9488] uppercase">Pemeliharaan</span>
+          <h3 class="font-bold text-gray-900 text-sm mt-1">Maintenance Fasilitas Pabrik</h3>
+        </div>
+      </div>
+
+      <!-- Image Card 4 -->
+      <div class="group relative overflow-hidden rounded-xl bg-gray-100 shadow-sm border border-gray-100">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Arsitektur" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+        <div class="p-4 bg-white">
+          <span class="text-[10px] font-bold text-[#0d9488] uppercase">Konstruksi</span>
+          <h3 class="font-bold text-gray-900 text-sm mt-1">Desain Struktural Bangunan</h3>
+        </div>
+      </div>
+
+      <!-- Image Card 5 -->
+      <div class="group relative overflow-hidden rounded-xl bg-gray-100 shadow-sm border border-gray-100">
+        <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80" alt="Inspeksi Mesin" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+        <div class="p-4 bg-white">
+          <span class="text-[10px] font-bold text-[#0d9488] uppercase">Jasa Pendukung</span>
+          <h3 class="font-bold text-gray-900 text-sm mt-1">Inspeksi Teknis Operasional</h3>
+        </div>
+      </div>
+
+      <!-- Image Card 6 -->
+      <div class="group relative overflow-hidden rounded-xl bg-gray-100 shadow-sm border border-gray-100">
+        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80" alt="Fabrikasi Logam" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+        <div class="p-4 bg-white">
+          <span class="text-[10px] font-bold text-[#0d9488] uppercase">Manufaktur</span>
+          <h3 class="font-bold text-gray-900 text-sm mt-1">Pekerjaan Logam & Pengelasan Presisi</h3>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-8 text-center text-xs mt-auto">
+    <p>&copy; 2026 PT. Adijaya Multijasa Solution. All rights reserved.</p>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

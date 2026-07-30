@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT. Adijaya Multijasa Solution</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+  <!-- NAVBAR -->
+  <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="bg-[#0b2830] text-white font-extrabold text-xl px-3 py-2 rounded">
+          AMS
+        </div>
+        <div class="flex flex-col leading-tight">
+          <span class="font-extrabold text-gray-900 text-sm tracking-wide">PT. ADIJAYA</span>
+          <span class="font-extrabold text-gray-900 text-sm tracking-wide">MULTIJASA</span>
+          <span class="text-[10px] text-gray-500 font-semibold tracking-widest">SOLUTION</span>
+        </div>
+      </a>
+
+      <!-- Nav Links -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="index.html" class="text-[#0d9488] font-bold border-b-2 border-[#0d9488] pb-1">Beranda</a>
+        <a href="tentang-kami.html" class="text-gray-600 hover:text-[#0d9488] transition">Tentang Kami</a>
+        <a href="layanan.html" class="text-gray-600 hover:text-[#0d9488] transition">Layanan</a>
+        <a href="client.html" class="text-gray-600 hover:text-[#0d9488] transition">Client</a>
+        <a href="galeri.html" class="text-gray-600 hover:text-[#0d9488] transition">Galeri</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <a href="#" class="bg-[#0d9488] hover:bg-[#0f766e] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">
+        Hubungi Kami
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="max-w-7xl mx-auto px-6 py-12 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <!-- Hero Text -->
+    <div class="space-y-6">
+      <p class="text-xs font-bold tracking-wider text-gray-500 uppercase">
+        SOLUSI TERPERCAYA UNTUK MASA DEPAN
+      </p>
+      
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+        Membangun<br>
+        Kualitas, Menciptakan<br>
+        <span class="relative inline-block">
+          Keberlanjutan
+          <span class="absolute -bottom-2 left-0 w-12 h-1 bg-[#0d9488]"></span>
+        </span>
+      </h1>
+
+      <p class="text-gray-500 text-sm md:text-base leading-relaxed max-w-lg">
+        PT. Adijaya Multijasa Solution hadir sebagai mitra terpercaya dalam menyediakan solusi terbaik di bidang konstruksi, manufaktur, dan jasa pendukung lainnya dengan standar kualitas tinggi dan profesional.
+      </p>
+
+      <div class="flex flex-wrap gap-4 pt-2">
+        <a href="layanan.html" class="bg-[#0d9488] hover:bg-[#0f766e] text-white px-5 py-3 rounded-lg text-sm font-semibold flex items-center gap-2 transition">
+          Lihat Layanan <span>&rarr;</span>
+        </a>
+        <a href="tentang-kami.html" class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-3 rounded-lg text-sm font-semibold transition">
+          Tentang Kami
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="relative w-full h-[380px] md:h-[450px] rounded-lg overflow-hidden shadow-sm">
+      <img 
+        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200" 
+        alt="Gedung Arsitektur" 
+        class="w-full h-full object-cover object-center"
+      >
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="max-w-7xl mx-auto px-6 py-12">
+    <!-- Header Services -->
+    <div class="mb-10">
+      <span class="text-xs font-bold tracking-wider text-[#0d9488] uppercase block mb-2">LAYANAN KAMI</span>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">
+          Solusi Terintegrasi<br>Untuk Kebutuhan Anda
+        </h2>
+        <p class="text-sm text-gray-500 border-l-2 border-gray-300 pl-4 py-1 leading-relaxed">
+          Kami menyediakan berbagai layanan profesional yang dirancang untuk memberikan hasil terbaik dan nilai keberlanjutan.
+        </p>
+      </div>
+    </div>
+
+    <!-- Service Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Card 1: Konstruksi -->
+      <div class="bg-gray-50/50 border border-gray-100 p-6 rounded-xl text-center hover:shadow-md transition">
+        <div class="text-[#0d9488] mb-4 flex justify-center">
+          <i data-lucide="building-2" class="w-8 h-8"></i>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Konstruksi</h3>
+        <p class="text-xs text-gray-500 leading-relaxed">
+          Pengerjaan konstruksi dengan standar mutu dan keselamatan tertinggi.
+        </p>
+      </div>
+
+      <!-- Card 2: Manufaktur -->
+      <div class="bg-gray-50/50 border border-gray-100 p-6 rounded-xl text-center hover:shadow-md transition">
+        <div class="text-[#0d9488] mb-4 flex justify-center">
+          <i data-lucide="settings" class="w-8 h-8"></i>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Manufaktur</h3>
+        <p class="text-xs text-gray-500 leading-relaxed">
+          Produksi komponen berkualitas yang presisi dan sesuai kebutuhan industri.
+        </p>
+      </div>
+
+      <!-- Card 3: Pemeliharaan -->
+      <div class="bg-gray-50/50 border border-gray-100 p-6 rounded-xl text-center hover:shadow-md transition">
+        <div class="text-[#0d9488] mb-4 flex justify-center">
+          <i data-lucide="wrench" class="w-8 h-8"></i>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Pemeliharaan</h3>
+        <p class="text-xs text-gray-500 leading-relaxed">
+          Layanan perawatan dan perbaikan untuk menjaga performa optimal aset Anda.
+        </p>
+      </div>
+
+      <!-- Card 4: Jasa Pendukung -->
+      <div class="bg-gray-50/50 border border-gray-100 p-6 rounded-xl text-center hover:shadow-md transition">
+        <div class="text-[#0d9488] mb-4 flex justify-center">
+          <i data-lucide="user" class="w-8 h-8"></i>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Jasa Pendukung</h3>
+        <p class="text-xs text-gray-500 leading-relaxed">
+          Layanan pendukung profesional yang melengkapi kebutuhan operasional Anda.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Inisialisasi Icon Lucide -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
