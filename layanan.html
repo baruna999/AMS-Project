@@ -9,6 +9,10 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    .reveal-load { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease-out, transform 0.9s ease-out; }
+    .reveal-load.show { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
@@ -17,14 +21,7 @@
   <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="index.html" class="flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" height="52" aria-label="PT. Adijaya Multijasa Solution">
-          <polyline points="4,4 60,4 68,14 68,68 4,68 4,4" fill="none" stroke="#111" stroke-width="5.5" stroke-linejoin="miter"/>
-          <line x1="4" y1="50" x2="22" y2="68" stroke="#111" stroke-width="5.5" stroke-linecap="square"/>
-          <text x="12" y="54" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="24" fill="#111" letter-spacing="-1">AMS</text>
-          <text x="84" y="28" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="20" fill="#111" letter-spacing="0.5">PT. ADIJAYA</text>
-          <text x="84" y="52" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="20" fill="#111" letter-spacing="0.5">MULTIJASA</text>
-          <text x="84" y="70" font-family="Arial, sans-serif" font-weight="300" font-size="16" fill="#333" letter-spacing="3">SOLUTION</text>
-        </svg>
+        <img src="image/logo-ams.png" alt="Logo PT. Adijaya Multijasa Solution" class="h-12 w-auto object-contain ml-5">
       </a>
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
         <a href="index.html" class="text-gray-600 hover:text-[#0d9488] transition">Beranda</a>
@@ -33,7 +30,9 @@
         <a href="client.html" class="text-gray-600 hover:text-[#0d9488] transition">Client</a>
         <a href="galeri.html" class="text-gray-600 hover:text-[#0d9488] transition">Galeri</a>
       </nav>
-      <a href="#" class="bg-[#0d9488] hover:bg-[#0f766e] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">Hubungi Kami</a>
+      <a href="https://wa.me/6285187273017" target="_blank" class="bg-[#0d9488] hover:bg-[#0f766e] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">
+        Hubungi Kami
+      </a>
     </div>
   </header>
 
@@ -41,7 +40,7 @@
   <section class="relative w-full h-64 flex items-end overflow-hidden">
     <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1600&q=80" alt="Layanan" class="absolute inset-0 w-full h-full object-cover object-center">
     <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
-    <div class="relative z-10 max-w-7xl mx-auto px-6 pb-10 w-full">
+    <div class="relative z-10 max-w-7xl mx-auto px-6 pb-10 w-full reveal-load">
       <p class="text-xs font-bold tracking-widest text-[#0d9488] uppercase mb-2">LAYANAN PROFESIONAL</p>
       <h1 class="text-3xl md:text-4xl font-extrabold text-white">Solusi Layanan Kami</h1>
       <p class="text-gray-300 text-sm mt-2 max-w-2xl">Layanan unggulan komprehensif yang dirancang spesifik sesuai standar operasional dan kebutuhan industri Anda.</p>
@@ -53,7 +52,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
       <!-- Service 1: Advertising -->
-      <div class="bg-white border border-gray-100 rounded-xl p-8 shadow-sm hover:shadow-md transition">
+      <div class="bg-white border border-gray-100 rounded-xl p-8 shadow-sm hover:shadow-md transition reveal-load">
         <div class="text-[#0d9488] mb-4">
           <i data-lucide="printer" class="w-10 h-10"></i>
         </div>
@@ -72,7 +71,7 @@
       </div>
 
       <!-- Service 2: Interior & Furniture -->
-      <div class="bg-white border border-gray-100 rounded-xl p-8 shadow-sm hover:shadow-md transition">
+      <div class="bg-white border border-gray-100 rounded-xl p-8 shadow-sm hover:shadow-md transition reveal-load">
         <div class="text-[#0d9488] mb-4">
           <i data-lucide="sofa" class="w-10 h-10"></i>
         </div>
@@ -91,7 +90,7 @@
       </div>
 
       <!-- Service 3: Konstruksi Sipil -->
-      <div class="bg-white border border-gray-100 rounded-xl p-8 shadow-sm hover:shadow-md transition">
+      <div class="bg-white border border-gray-100 rounded-xl p-8 shadow-sm hover:shadow-md transition reveal">
         <div class="text-[#0d9488] mb-4">
           <i data-lucide="building-2" class="w-10 h-10"></i>
         </div>
@@ -110,7 +109,7 @@
       </div>
 
       <!-- Service 4: Pendingin Ruangan -->
-      <div class="bg-white border border-gray-100 rounded-xl p-8 shadow-sm hover:shadow-md transition">
+      <div class="bg-white border border-gray-100 rounded-xl p-8 shadow-sm hover:shadow-md transition reveal">
         <div class="text-[#0d9488] mb-4">
           <i data-lucide="wind" class="w-10 h-10"></i>
         </div>
@@ -129,7 +128,7 @@
       </div>
 
       <!-- Service 5: Wedding Organizer -->
-      <div class="bg-white border border-gray-100 rounded-xl p-8 shadow-sm hover:shadow-md transition">
+      <div class="bg-white border border-gray-100 rounded-xl p-8 shadow-sm hover:shadow-md transition reveal">
         <div class="text-[#0d9488] mb-4">
           <i data-lucide="heart" class="w-10 h-10"></i>
         </div>
@@ -152,29 +151,36 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-[#0b1f26] text-gray-300 mt-auto">
-    <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
-      <div class="space-y-4 lg:col-span-2">
-        <a href="index.html" class="flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" height="44" aria-label="PT. Adijaya Multijasa Solution">
-            <polyline points="4,4 60,4 68,14 68,68 4,68 4,4" fill="none" stroke="#fff" stroke-width="5.5" stroke-linejoin="miter"/>
-            <line x1="4" y1="50" x2="22" y2="68" stroke="#fff" stroke-width="5.5" stroke-linecap="square"/>
-            <text x="12" y="54" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="24" fill="#fff" letter-spacing="-1">AMS</text>
-            <text x="84" y="28" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="20" fill="#fff" letter-spacing="0.5">PT. ADIJAYA</text>
-            <text x="84" y="52" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="20" fill="#fff" letter-spacing="0.5">MULTIJASA</text>
-            <text x="84" y="70" font-family="Arial, sans-serif" font-weight="300" font-size="16" fill="#ccc" letter-spacing="3">SOLUTION</text>
-          </svg>
+  <footer class="bg-[#0b1f26] text-gray-300 mt-auto reveal">
+    <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-10">
+
+      <!-- Kolom 1: Brand & tagline -->
+      <div class="space-y-4 lg:col-span-3">
+        <a href="index.html" class="flex items-center mb-2">
+          <img src="image/logo-ams.png" alt="Logo PT. Adijaya Multijasa Solution" class="h-14 w-auto object-contain" style="filter: brightness(0) invert(1);">
         </a>
         <p class="text-sm text-gray-400 leading-relaxed" style="text-align: justify;">
           Perusahaan multijasa terpercaya yang berdiri sejak 2003 dan dikukuhkan sebagai PT pada 2 Maret 2023. Berkomitmen menghadirkan solusi terbaik di setiap bidang layanan.
         </p>
+        <!-- Social -->
         <div class="flex gap-3 pt-1">
-          <a href="https://www.instagram.com/adijaya_solution?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="w-8 h-8 bg-white/10 hover:bg-[#0d9488] rounded-full flex items-center justify-center transition"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-          <a href="https://wa.me/6281220832313" target="_blank" class="w-8 h-8 bg-white/10 hover:bg-[#0d9488] rounded-full flex items-center justify-center transition"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
-          <a href="mailto:ptadijayamultijasasolution@gmail.com" class="w-8 h-8 bg-white/10 hover:bg-[#0d9488] rounded-full flex items-center justify-center transition"><i data-lucide="mail" class="w-4 h-4"></i></a>
+          <a href="https://www.instagram.com/adijaya_solution?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"
+             class="w-8 h-8 bg-white/10 hover:bg-[#0d9488] rounded-full flex items-center justify-center transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/6281220832313" target="_blank"
+             class="w-8 h-8 bg-white/10 hover:bg-[#0d9488] rounded-full flex items-center justify-center transition">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+          </a>
+          <a href="mailto:ptadijayamultijasasolution@gmail.com"
+             class="w-8 h-8 bg-white/10 hover:bg-[#0d9488] rounded-full flex items-center justify-center transition">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </a>
         </div>
       </div>
-      <div class="space-y-4">
+
+      <!-- Kolom 2: Informasi Perusahaan -->
+      <div class="space-y-4 lg:col-span-3">
         <h4 class="font-bold text-white text-sm">PT. Adijaya Multijasa Solution</h4>
         <div class="space-y-3 text-sm text-gray-400">
           <div>
@@ -193,7 +199,9 @@
           </div>
         </div>
       </div>
-      <div class="space-y-4">
+
+      <!-- Kolom 3: Menu Utama -->
+      <div class="space-y-4 lg:col-span-2">
         <h4 class="font-bold text-white text-sm">Menu Utama</h4>
         <ul class="space-y-2 text-sm text-gray-400">
           <li><a href="index.html" class="hover:text-[#0d9488] transition">Beranda</a></li>
@@ -203,16 +211,33 @@
           <li><a href="galeri.html" class="hover:text-[#0d9488] transition">Galeri Pekerjaan</a></li>
         </ul>
       </div>
-      <div class="space-y-4">
+
+      <!-- Kolom 4: Kontak -->
+      <div class="space-y-4 lg:col-span-4">
         <h4 class="font-bold text-white text-sm">Hubungi Kami</h4>
         <ul class="space-y-3 text-sm text-gray-400">
-          <li class="flex items-start gap-2"><i data-lucide="phone" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i><a href="tel:+6281220832313" class="hover:text-[#0d9488] transition">081-220-832313</a></li>
-          <li class="flex items-start gap-2"><i data-lucide="mail" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i><a href="mailto:ptadijayamultijasasolution@gmail.com" class="hover:text-[#0d9488] transition break-all">ptadijayamultijasasolution<br>@gmail.com</a></li>
-          <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg><a href="https://www.instagram.com/adijaya_solution?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-[#0d9488] transition">@adijaya.solution</a></li>
-          <li class="flex items-start gap-2"><i data-lucide="badge-check" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i><span>Status: Terdaftar & PKP</span></li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i>
+            <a href="tel:+6281220832313" class="hover:text-[#0d9488] transition">081-220-832313</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="mail" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i>
+            <a href="mailto:ptadijayamultijasasolution@gmail.com" class="hover:text-[#0d9488] transition break-all">ptadijayamultijasasolution@gmail.com</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <a href="https://www.instagram.com/adijaya_solution?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-[#0d9488] transition">@adijaya.solution</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="badge-check" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i>
+            <span>Status: Terdaftar & PKP</span>
+          </li>
         </ul>
       </div>
+
     </div>
+
+    <!-- Bottom bar -->
     <div class="border-t border-white/10">
       <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
         <p>&copy; 2026 PT. Adijaya Multijasa Solution. Hak Cipta Dilindungi.</p>
@@ -222,5 +247,22 @@
   </footer>
 
   <script>lucide.createIcons();</script>
+  <script>
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.reveal-load').forEach(el => {
+        requestAnimationFrame(() => el.classList.add('show'));
+      });
+    });
+  </script>
 </body>
 </html>
