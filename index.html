@@ -9,6 +9,10 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    .reveal-load { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease-out, transform 0.9s ease-out; }
+    .reveal-load.show { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
@@ -17,23 +21,7 @@
   <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="index.html" class="flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" height="52" aria-label="PT. Adijaya Multijasa Solution">
-          <!-- Icon: trapezoid frame -->
-          <polygon points="4,4 60,4 60,68 4,68 4,4" fill="none" stroke="#111" stroke-width="5.5" stroke-linejoin="miter"/>
-          <!-- Diagonal cut top-right corner -->
-          <polygon points="60,4 68,4 68,68 60,68" fill="white"/>
-          <polygon points="60,4 68,4 60,20" fill="white"/>
-          <!-- Re-draw frame with cut corner -->
-          <polyline points="4,4 60,4 68,14 68,68 4,68 4,4" fill="none" stroke="#111" stroke-width="5.5" stroke-linejoin="miter"/>
-          <!-- Diagonal slash bottom-left inside -->
-          <line x1="4" y1="50" x2="22" y2="68" stroke="#111" stroke-width="5.5" stroke-linecap="square"/>
-          <!-- AMS text inside icon -->
-          <text x="12" y="54" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="24" fill="#111" letter-spacing="-1">AMS</text>
-          <!-- Company name right side -->
-          <text x="84" y="28" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="20" fill="#111" letter-spacing="0.5">PT. ADIJAYA</text>
-          <text x="84" y="52" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="20" fill="#111" letter-spacing="0.5">MULTIJASA</text>
-          <text x="84" y="70" font-family="Arial, sans-serif" font-weight="300" font-size="16" fill="#333" letter-spacing="3">SOLUTION</text>
-        </svg>
+        <img src="image/logo-ams.png" alt="Logo PT. Adijaya Multijasa Solution" class="h-12 w-auto object-contain ml-5">
       </a>
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
         <a href="index.html" class="text-[#0d9488] font-bold border-b-2 border-[#0d9488] pb-1">Beranda</a>
@@ -42,14 +30,14 @@
         <a href="client.html" class="text-gray-600 hover:text-[#0d9488] transition">Client</a>
         <a href="galeri.html" class="text-gray-600 hover:text-[#0d9488] transition">Galeri</a>
       </nav>
-      <a href="https://wa.me/6281220832313" target="_blank" class="bg-[#0d9488] hover:bg-[#0f766e] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">
+      <a href="https://wa.me/6285187273017" target="_blank" class="bg-[#0d9488] hover:bg-[#0f766e] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">
         Hubungi Kami
       </a>
     </div>
   </header>
 
   <!-- HERO — full-width background image with overlay text -->
-  <section class="relative w-full h-[85vh] min-h-[520px] flex items-end overflow-hidden">
+  <section class="relative w-full h-[85vh] min-h-[620px] flex items-end overflow-hidden">
     <!-- Background image -->
     <img
       src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
@@ -60,11 +48,11 @@
     <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
 
     <!-- Text content — bottom-left aligned like ladanglima.com -->
-    <div class="relative z-10 max-w-7xl mx-auto px-6 pb-16 md:pb-20 w-full">
+    <div class="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-16 md:pb-20 w-full reveal-load">
       <p class="text-xs font-bold tracking-widest text-gray-300 uppercase mb-4">
         SOLUSI TERPERCAYA UNTUK MASA DEPAN
       </p>
-      <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 max-w-2xl">
+      <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 max-w-2xl">
         MEMBANGUN<br>
         KUALITAS,<br>
         MENCIPTAKAN<br>
@@ -86,7 +74,7 @@
 
   <!-- SERVICES SECTION -->
   <section class="max-w-7xl mx-auto px-6 py-16">
-    <div class="mb-10">
+    <div class="mb-10 reveal">
       <span class="text-xs font-bold tracking-wider text-[#0d9488] uppercase block mb-2">LAYANAN KAMI</span>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
         <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">
@@ -99,35 +87,35 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="bg-gray-50/50 border border-gray-100 p-6 rounded-xl text-center hover:shadow-md transition">
+      <div class="bg-gray-50/50 border border-gray-100 p-6 rounded-xl text-center hover:shadow-md transition reveal">
         <div class="text-[#0d9488] mb-4 flex justify-center">
           <i data-lucide="printer" class="w-8 h-8"></i>
         </div>
         <h3 class="font-bold text-gray-900 mb-2">Advertising & Digital Print</h3>
         <p class="text-xs text-gray-500 leading-relaxed">Percetakan besar & menengah, digital print, dan huruf timbul 3D.</p>
       </div>
-      <div class="bg-gray-50/50 border border-gray-100 p-6 rounded-xl text-center hover:shadow-md transition">
+      <div class="bg-gray-50/50 border border-gray-100 p-6 rounded-xl text-center hover:shadow-md transition reveal">
         <div class="text-[#0d9488] mb-4 flex justify-center">
           <i data-lucide="sofa" class="w-8 h-8"></i>
         </div>
         <h3 class="font-bold text-gray-900 mb-2">Interior & Furniture</h3>
         <p class="text-xs text-gray-500 leading-relaxed">Kitchen set, office & living room set, backwall customer services.</p>
       </div>
-      <div class="bg-gray-50/50 border border-gray-100 p-6 rounded-xl text-center hover:shadow-md transition">
+      <div class="bg-gray-50/50 border border-gray-100 p-6 rounded-xl text-center hover:shadow-md transition reveal">
         <div class="text-[#0d9488] mb-4 flex justify-center">
           <i data-lucide="building-2" class="w-8 h-8"></i>
         </div>
         <h3 class="font-bold text-gray-900 mb-2">Konstruksi Sipil</h3>
         <p class="text-xs text-gray-500 leading-relaxed">Renovasi dan pembangunan dari bowplank sampai serah terima kunci.</p>
       </div>
-      <div class="bg-gray-50/50 border border-gray-100 p-6 rounded-xl text-center hover:shadow-md transition">
+      <div class="bg-gray-50/50 border border-gray-100 p-6 rounded-xl text-center hover:shadow-md transition reveal">
         <div class="text-[#0d9488] mb-4 flex justify-center">
           <i data-lucide="wind" class="w-8 h-8"></i>
         </div>
         <h3 class="font-bold text-gray-900 mb-2">Pendingin Ruangan</h3>
         <p class="text-xs text-gray-500 leading-relaxed">Pemasangan dan perawatan AC untuk hunian maupun non-hunian.</p>
       </div>
-      <div class="bg-gray-50/50 border border-gray-100 p-6 rounded-xl text-center hover:shadow-md transition">
+      <div class="bg-gray-50/50 border border-gray-100 p-6 rounded-xl text-center hover:shadow-md transition reveal">
         <div class="text-[#0d9488] mb-4 flex justify-center">
           <i data-lucide="heart" class="w-8 h-8"></i>
         </div>
@@ -138,7 +126,7 @@
   </section>
 
   <!-- VERIFIED SECTION: Logo lembaga berjalan -->
-  <section class="w-full bg-white border-t border-b border-gray-100 py-5 overflow-hidden">
+  <section class="w-full bg-white border-t border-b border-gray-100 py-5 overflow-hidden reveal">
     <div class="max-w-7xl mx-auto px-6 mb-3 text-center">
       <p class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Terdaftar & Terverifikasi Pada</p>
     </div>
@@ -204,37 +192,6 @@
           </svg>
         </div>
 
-        <!-- Kementerian UMKM -->
-        <div class="flex items-center shrink-0 h-14">
-          <svg viewBox="0 0 160 60" height="44" xmlns="http://www.w3.org/2000/svg">
-            <!-- wheel/cog simplified -->
-            <circle cx="22" cy="28" r="16" fill="none" stroke="#1a237e" stroke-width="3"/>
-            <circle cx="22" cy="28" r="7" fill="none" stroke="#1a237e" stroke-width="2.5"/>
-            <line x1="22" y1="10" x2="22" y2="46" stroke="#1a237e" stroke-width="2.5"/>
-            <line x1="4" y1="28" x2="40" y2="28" stroke="#1a237e" stroke-width="2.5"/>
-            <line x1="9" y1="15" x2="35" y2="41" stroke="#1a237e" stroke-width="2"/>
-            <line x1="35" y1="15" x2="9" y2="41" stroke="#1a237e" stroke-width="2"/>
-            <text x="46" y="24" font-family="Arial, sans-serif" font-size="9" fill="#888" letter-spacing="0.5">KEMENTERIAN</text>
-            <text x="46" y="40" font-family="Arial Black, sans-serif" font-weight="900" font-size="20" fill="#1a237e">UMKM</text>
-          </svg>
-        </div>
-
-        <!-- Halal Indonesia -->
-        <div class="flex items-center shrink-0 h-14">
-          <svg viewBox="0 0 100 68" height="52" xmlns="http://www.w3.org/2000/svg">
-            <!-- Arch/lamp shape -->
-            <rect x="14" y="30" width="10" height="30" fill="#111" rx="1"/>
-            <rect x="76" y="30" width="10" height="30" fill="#111" rx="1"/>
-            <path d="M14,30 Q50,2 86,30" fill="none" stroke="#111" stroke-width="5"/>
-            <rect x="30" y="30" width="10" height="24" fill="#111" rx="1"/>
-            <rect x="60" y="30" width="10" height="24" fill="#111" rx="1"/>
-            <rect x="44" y="30" width="12" height="20" fill="#111" rx="1"/>
-            <!-- Text -->
-            <text x="50" y="66" font-family="Arial Black, sans-serif" font-weight="900" font-size="11" fill="#111" text-anchor="middle" letter-spacing="1">HALAL</text>
-            <text x="50" y="78" font-family="Arial, sans-serif" font-size="7" fill="#555" text-anchor="middle" letter-spacing="1">INDONESIA</text>
-          </svg>
-        </div>
-
         <!-- === DUPLIKAT untuk loop seamless === -->
 
         <!-- OSS / BKPM -->
@@ -280,30 +237,6 @@
             <text x="0" y="54" font-family="Arial, sans-serif" font-size="10" fill="#888" letter-spacing="1">Katalog Elektronik</text>
           </svg>
         </div>
-        <div class="flex items-center shrink-0 h-14">
-          <svg viewBox="0 0 160 60" height="44" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="22" cy="28" r="16" fill="none" stroke="#1a237e" stroke-width="3"/>
-            <circle cx="22" cy="28" r="7" fill="none" stroke="#1a237e" stroke-width="2.5"/>
-            <line x1="22" y1="10" x2="22" y2="46" stroke="#1a237e" stroke-width="2.5"/>
-            <line x1="4" y1="28" x2="40" y2="28" stroke="#1a237e" stroke-width="2.5"/>
-            <line x1="9" y1="15" x2="35" y2="41" stroke="#1a237e" stroke-width="2"/>
-            <line x1="35" y1="15" x2="9" y2="41" stroke="#1a237e" stroke-width="2"/>
-            <text x="46" y="24" font-family="Arial, sans-serif" font-size="9" fill="#888" letter-spacing="0.5">KEMENTERIAN</text>
-            <text x="46" y="40" font-family="Arial Black, sans-serif" font-weight="900" font-size="20" fill="#1a237e">UMKM</text>
-          </svg>
-        </div>
-        <div class="flex items-center shrink-0 h-14">
-          <svg viewBox="0 0 100 68" height="52" xmlns="http://www.w3.org/2000/svg">
-            <rect x="14" y="30" width="10" height="30" fill="#111" rx="1"/>
-            <rect x="76" y="30" width="10" height="30" fill="#111" rx="1"/>
-            <path d="M14,30 Q50,2 86,30" fill="none" stroke="#111" stroke-width="5"/>
-            <rect x="30" y="30" width="10" height="24" fill="#111" rx="1"/>
-            <rect x="60" y="30" width="10" height="24" fill="#111" rx="1"/>
-            <rect x="44" y="30" width="12" height="20" fill="#111" rx="1"/>
-            <text x="50" y="66" font-family="Arial Black, sans-serif" font-weight="900" font-size="11" fill="#111" text-anchor="middle" letter-spacing="1">HALAL</text>
-            <text x="50" y="78" font-family="Arial, sans-serif" font-size="7" fill="#555" text-anchor="middle" letter-spacing="1">INDONESIA</text>
-          </svg>
-        </div>
 
       </div>
     </div>
@@ -318,19 +251,12 @@
 
   <!-- FOOTER -->
   <footer class="bg-[#0b1f26] text-gray-300 mt-auto">
-    <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+    <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-10 reveal">
 
       <!-- Kolom 1: Brand & tagline -->
-      <div class="space-y-4 lg:col-span-2">
-        <a href="index.html" class="flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" height="44" aria-label="PT. Adijaya Multijasa Solution">
-            <polyline points="4,4 60,4 68,14 68,68 4,68 4,4" fill="none" stroke="#fff" stroke-width="5.5" stroke-linejoin="miter"/>
-            <line x1="4" y1="50" x2="22" y2="68" stroke="#fff" stroke-width="5.5" stroke-linecap="square"/>
-            <text x="12" y="54" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="24" fill="#fff" letter-spacing="-1">AMS</text>
-            <text x="84" y="28" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="20" fill="#fff" letter-spacing="0.5">PT. ADIJAYA</text>
-            <text x="84" y="52" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="20" fill="#fff" letter-spacing="0.5">MULTIJASA</text>
-            <text x="84" y="70" font-family="Arial, sans-serif" font-weight="300" font-size="16" fill="#ccc" letter-spacing="3">SOLUTION</text>
-          </svg>
+      <div class="space-y-4 lg:col-span-3">
+        <a href="index.html" class="flex items-center mb-2">
+          <img src="image/logo-ams.png" alt="Logo PT. Adijaya Multijasa Solution" class="h-14 w-auto object-contain" style="filter: brightness(0) invert(1);">
         </a>
         <p class="text-sm text-gray-400 leading-relaxed" style="text-align: justify;">
           Perusahaan multijasa terpercaya yang berdiri sejak 2003 dan dikukuhkan sebagai PT pada 2 Maret 2023. Berkomitmen menghadirkan solusi terbaik di setiap bidang layanan.
@@ -353,7 +279,7 @@
       </div>
 
       <!-- Kolom 2: Informasi Perusahaan -->
-      <div class="space-y-4">
+      <div class="space-y-4 lg:col-span-3">
         <h4 class="font-bold text-white text-sm">PT. Adijaya Multijasa Solution</h4>
         <div class="space-y-3 text-sm text-gray-400">
           <div>
@@ -374,7 +300,7 @@
       </div>
 
       <!-- Kolom 3: Menu Utama -->
-      <div class="space-y-4">
+      <div class="space-y-4 lg:col-span-2">
         <h4 class="font-bold text-white text-sm">Menu Utama</h4>
         <ul class="space-y-2 text-sm text-gray-400">
           <li><a href="index.html" class="hover:text-[#0d9488] transition">Beranda</a></li>
@@ -386,7 +312,7 @@
       </div>
 
       <!-- Kolom 4: Kontak -->
-      <div class="space-y-4">
+      <div class="space-y-4 lg:col-span-4">
         <h4 class="font-bold text-white text-sm">Hubungi Kami</h4>
         <ul class="space-y-3 text-sm text-gray-400">
           <li class="flex items-start gap-2">
@@ -395,7 +321,7 @@
           </li>
           <li class="flex items-start gap-2">
             <i data-lucide="mail" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i>
-            <a href="mailto:ptadijayamultijasasolution@gmail.com" class="hover:text-[#0d9488] transition break-all">ptadijayamultijasasolution<br>@gmail.com</a>
+            <a href="mailto:ptadijayamultijasasolution@gmail.com" class="hover:text-[#0d9488] transition break-all">ptadijayamultijasasolution@gmail.com</a>
           </li>
           <li class="flex items-start gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -420,5 +346,22 @@
   </footer>
 
   <script>lucide.createIcons();</script>
+  <script>
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.reveal-load').forEach(el => {
+        requestAnimationFrame(() => el.classList.add('show'));
+      });
+    });
+  </script>
 </body>
 </html>
