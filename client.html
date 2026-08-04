@@ -31,6 +31,21 @@
         <a href="galeri.html" class="text-gray-600 hover:text-[#0d9488] transition">Galeri</a>
       </nav>
       <a href="https://wa.me/6285187273017" target="_blank" class="bg-[#0d9488] hover:bg-[#0f766e] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">Hubungi Kami</a>
+      <!-- Tombol menu mobile (titik tiga) -->
+      <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Buka menu" aria-expanded="false"
+        class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 hover:bg-gray-100 active:bg-gray-200 transition">
+        <i data-lucide="more-vertical" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <!-- Dropdown menu mobile -->
+    <div id="mobileMenu" class="hidden md:hidden absolute right-4 top-[70px] w-56 bg-white border border-gray-100 rounded-xl shadow-lg py-2 z-50">
+      <a href="index.html" class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">Beranda</a>
+      <a href="tentang-kami.html" class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">Tentang Kami</a>
+      <a href="layanan.html" class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">Layanan</a>
+      <a href="client.html" class="block px-4 py-2.5 text-sm font-bold text-[#0d9488] bg-teal-50/60">Client</a>
+      <a href="galeri.html" class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">Galeri</a>
+      <div class="border-t border-gray-100 my-2"></div>
+      <a href="https://wa.me/6285187273017" target="_blank" class="block px-4 py-2.5 text-sm font-semibold text-[#0d9488] hover:bg-gray-50 transition">Hubungi Kami</a>
     </div>
   </header>
 
@@ -313,6 +328,24 @@
     </div>
   </footer>
 
+    <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.getElementById('mobileMenuBtn');
+      const willOpen = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(willOpen));
+    }
+    document.addEventListener('click', function (e) {
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.getElementById('mobileMenuBtn');
+      if (!menu || !btn) return;
+      if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
   <script>lucide.createIcons();</script>
   <script>
     const revealObserver = new IntersectionObserver((entries) => {
