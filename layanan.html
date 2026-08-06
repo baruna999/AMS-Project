@@ -26,7 +26,30 @@
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
         <a href="index.html" class="text-gray-600 hover:text-[#0d9488] transition">Beranda</a>
         <a href="tentang-kami.html" class="text-gray-600 hover:text-[#0d9488] transition">Tentang Kami</a>
-        <a href="layanan.html" class="text-[#0d9488] font-bold border-b-2 border-[#0d9488] pb-1">Layanan</a>
+        <!-- Layanan Dropdown - Active -->
+        <div class="relative group">
+          <button class="flex items-center gap-1 text-[#0d9488] font-bold border-b-2 border-[#0d9488] pb-1 text-sm">
+            Layanan
+            <svg class="w-3.5 h-3.5 mt-0.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
+            <a href="layanan.html" class="flex items-center gap-3 px-4 py-3 text-sm text-[#0d9488] font-semibold hover:bg-gray-50 transition border-b border-gray-100">
+              <i data-lucide="layout-grid" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Semua Layanan
+            </a>
+            <a href="layanan-konstruksi.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
+              <i data-lucide="building-2" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Konstruksi Sipil Bangunan
+            </a>
+            <a href="layanan-advertising.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
+              <i data-lucide="printer" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Advertising & Digital Print
+            </a>
+            <a href="layanan-interior.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
+              <i data-lucide="sofa" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Interior & Furniture Set
+            </a>
+            <a href="layanan-pendingin.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
+              <i data-lucide="wind" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Pendingin Ruangan
+            </a>
+          </div>
+        </div>
         <a href="client.html" class="text-gray-600 hover:text-[#0d9488] transition">Mitra Bisnis</a>
         <a href="galeri.html" class="text-gray-600 hover:text-[#0d9488] transition">Galeri</a>
       </nav>
@@ -71,17 +94,18 @@
         <div class="text-[#0d9488] mb-4">
           <i data-lucide="printer" class="w-10 h-10"></i>
         </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Advertising</h3>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Advertising & Digital Print</h3>
         <p class="text-gray-600 text-sm leading-relaxed mb-4">
-          Layanan percetakan dan media promosi skala besar maupun menengah, mencakup digital print hingga produksi huruf timbul 3D untuk kebutuhan branding dan promosi bisnis Anda.
+          Layanan percetakan dan media promosi skala besar maupun menengah — mencakup digital print, huruf timbul 3D, dan neon box untuk kebutuhan branding dan promosi bisnis Anda (KBLI 18111 & 32909).
         </p>
         <ul class="text-xs text-gray-500 space-y-1.5 mb-4">
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0d9488]"></i> Percetakan Besar & Menengah</li>
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0d9488]"></i> Digital Print</li>
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0d9488]"></i> Huruf Timbul 3D</li>
         </ul>
-        <div class="pt-3 border-t border-gray-100">
+        <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
           <p class="text-xs text-gray-400 italic">Fase: Survey → Design Produk → Pradesign → RAB → Produksi → Alokasi</p>
+          <a href="layanan-advertising.html" class="text-xs text-[#0d9488] font-semibold hover:underline shrink-0 ml-3">Detail →</a>
         </div>
       </div>
 
@@ -99,8 +123,9 @@
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0d9488]"></i> Kitchen Set</li>
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0d9488]"></i> Office & Living Room Set</li>
         </ul>
-        <div class="pt-3 border-t border-gray-100">
+        <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
           <p class="text-xs text-gray-400 italic">Fase: Survey → Design 2D&3D → RAB → Produksi → Alokasi</p>
+          <a href="layanan-interior.html" class="text-xs text-[#0d9488] font-semibold hover:underline shrink-0 ml-3">Detail →</a>
         </div>
       </div>
 
@@ -118,8 +143,9 @@
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0d9488]"></i> Pembangunan dari Bowplank s.d. Serah Terima Kunci</li>
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0d9488]"></i> Manajemen & Pengawasan Proyek</li>
         </ul>
-        <div class="pt-3 border-t border-gray-100">
+        <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
           <p class="text-xs text-gray-400 italic">Fase: Survey → Design 2D&3D → RAB → Perijinan → Pembangunan → BAST</p>
+          <a href="layanan-konstruksi.html" class="text-xs text-[#0d9488] font-semibold hover:underline shrink-0 ml-3">Detail →</a>
         </div>
       </div>
 
@@ -130,35 +156,16 @@
         </div>
         <h3 class="text-xl font-bold text-gray-900 mb-3">Pendingin Ruangan</h3>
         <p class="text-gray-600 text-sm leading-relaxed mb-4">
-          Layanan pemasangan, perawatan, dan servis sistem pendingin dan ventilasi udara (AC) untuk bangunan hunian maupun non-hunian, termasuk pekerjaan pipa dan ducting.
+          Pemasangan dan perawatan ventilasi, lemari pendingin dan penyejuk udara (AC) untuk bangunan gedung hunian maupun non-hunian, termasuk pekerjaan pipa, ducting dan lembaran logam (KBLI 43224).
         </p>
         <ul class="text-xs text-gray-500 space-y-1.5 mb-4">
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0d9488]"></i> Instalasi AC (Air Conditioner)</li>
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0d9488]"></i> Pemasangan Ventilasi & Ducting</li>
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0d9488]"></i> Perawatan & Servis Berkala</li>
         </ul>
-        <div class="pt-3 border-t border-gray-100">
+        <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
           <p class="text-xs text-gray-400 italic">Untuk hunian & non-hunian, termasuk pekerjaan pipa dan lembaran logam</p>
-        </div>
-      </div>
-
-      <!-- Service 5: Wedding Organizer -->
-      <div class="bg-white border border-gray-100 rounded-xl p-8 shadow-sm hover:shadow-md transition reveal">
-        <div class="text-[#0d9488] mb-4">
-          <i data-lucide="heart" class="w-10 h-10"></i>
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Wedding Organizer</h3>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-          Layanan perencanaan dan penyelenggaraan pernikahan secara menyeluruh — dari dekorasi, catering, dokumentasi, hingga koordinasi acara — agar hari spesial Anda berjalan lancar dan berkesan.
-        </p>
-        <ul class="text-xs text-gray-500 space-y-1.5 mb-4">
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0d9488]"></i> Perencanaan & Konsultasi Pernikahan</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0d9488]"></i> Dekorasi & Tata Artistik Venue</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0d9488]"></i> Koordinasi Vendor & Rundown Acara</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0d9488]"></i> Dokumentasi Foto & Video</li>
-        </ul>
-        <div class="pt-3 border-t border-gray-100">
-          <p class="text-xs text-gray-400 italic">Fase: Konsultasi → Konsep → Vendor → Gladi → Pelaksanaan → Evaluasi</p>
+          <a href="layanan-pendingin.html" class="text-xs text-[#0d9488] font-semibold hover:underline shrink-0 ml-3">Detail →</a>
         </div>
       </div>
 

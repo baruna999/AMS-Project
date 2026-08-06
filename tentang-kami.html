@@ -26,7 +26,30 @@
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
         <a href="index.html" class="text-gray-600 hover:text-[#0d9488] transition">Beranda</a>
         <a href="tentang-kami.html" class="text-[#0d9488] font-bold border-b-2 border-[#0d9488] pb-1">Tentang Kami</a>
-        <a href="layanan.html" class="text-gray-600 hover:text-[#0d9488] transition">Layanan</a>
+        <!-- Layanan Dropdown -->
+        <div class="relative group">
+          <button class="flex items-center gap-1 text-gray-600 hover:text-[#0d9488] transition font-medium text-sm">
+            Layanan
+            <svg class="w-3.5 h-3.5 mt-0.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
+            <a href="layanan.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition border-b border-gray-100">
+              <i data-lucide="layout-grid" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Semua Layanan
+            </a>
+            <a href="layanan-konstruksi.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
+              <i data-lucide="building-2" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Konstruksi Sipil Bangunan
+            </a>
+            <a href="layanan-advertising.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
+              <i data-lucide="printer" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Advertising & Digital Print
+            </a>
+            <a href="layanan-interior.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
+              <i data-lucide="sofa" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Interior & Furniture Set
+            </a>
+            <a href="layanan-pendingin.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
+              <i data-lucide="wind" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Pendingin Ruangan
+            </a>
+          </div>
+        </div>
         <a href="client.html" class="text-gray-600 hover:text-[#0d9488] transition">Mitra Bisnis</a>
         <a href="galeri.html" class="text-gray-600 hover:text-[#0d9488] transition">Galeri</a>
       </nav>
@@ -164,65 +187,6 @@
       </div>
     </div>
 
-    <!-- Bidang Usaha -->
-    <div class="reveal">
-      <span class="text-xs font-bold text-[#0d9488] uppercase tracking-wider">APA YANG KAMI KERJAKAN</span>
-      <h2 class="text-2xl font-bold text-gray-900 mt-2 mb-8">Bidang Usaha</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <div class="bg-gray-50 border border-gray-100 p-6 rounded-xl reveal">
-          <div class="w-10 h-10 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center mb-4">
-            <i data-lucide="printer" class="w-5 h-5"></i>
-          </div>
-          <h3 class="font-bold text-gray-900 mb-3">Advertising</h3>
-          <ul class="text-xs text-gray-500 space-y-1.5">
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#0d9488] mt-0.5 shrink-0"></i> Percetakan Besar & Menengah</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#0d9488] mt-0.5 shrink-0"></i> Digital Print</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#0d9488] mt-0.5 shrink-0"></i> Huruf Timbul 3D</li>
-            <li class="flex items-start gap-2 mt-2"><i data-lucide="git-branch" class="w-3.5 h-3.5 text-gray-400 mt-0.5 shrink-0"></i> <span class="text-gray-400 italic">Survey / Design / RAB / Produksi / Alokasi</span></li>
-          </ul>
-        </div>
-
-        <div class="bg-gray-50 border border-gray-100 p-6 rounded-xl reveal">
-          <div class="w-10 h-10 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center mb-4">
-            <i data-lucide="sofa" class="w-5 h-5"></i>
-          </div>
-          <h3 class="font-bold text-gray-900 mb-3">Interior & Furniture Set</h3>
-          <ul class="text-xs text-gray-500 space-y-1.5">
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#0d9488] mt-0.5 shrink-0"></i> Backwall Customer Services</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#0d9488] mt-0.5 shrink-0"></i> Kitchen Set</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#0d9488] mt-0.5 shrink-0"></i> Office & Living Room Set</li>
-            <li class="flex items-start gap-2 mt-2"><i data-lucide="git-branch" class="w-3.5 h-3.5 text-gray-400 mt-0.5 shrink-0"></i> <span class="text-gray-400 italic">Survey / Design 2D&3D / RAB / Produksi / Alokasi</span></li>
-          </ul>
-        </div>
-
-        <div class="bg-gray-50 border border-gray-100 p-6 rounded-xl reveal">
-          <div class="w-10 h-10 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center mb-4">
-            <i data-lucide="building-2" class="w-5 h-5"></i>
-          </div>
-          <h3 class="font-bold text-gray-900 mb-3">Konstruksi Sipil Bangunan</h3>
-          <ul class="text-xs text-gray-500 space-y-1.5">
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#0d9488] mt-0.5 shrink-0"></i> Renovasi Bangunan</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#0d9488] mt-0.5 shrink-0"></i> Pembangunan dari Bowplank s.d. Serah Terima Kunci</li>
-            <li class="flex items-start gap-2 mt-2"><i data-lucide="git-branch" class="w-3.5 h-3.5 text-gray-400 mt-0.5 shrink-0"></i> <span class="text-gray-400 italic">Survey / Design 2D&3D / RAB / Perijinan / BAST</span></li>
-          </ul>
-        </div>
-
-        <div class="bg-gray-50 border border-gray-100 p-6 rounded-xl reveal">
-          <div class="w-10 h-10 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center mb-4">
-            <i data-lucide="heart" class="w-5 h-5"></i>
-          </div>
-          <h3 class="font-bold text-gray-900 mb-3">Wedding Organizer</h3>
-          <ul class="text-xs text-gray-500 space-y-1.5">
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#0d9488] mt-0.5 shrink-0"></i> Perencanaan & Konsultasi Pernikahan</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#0d9488] mt-0.5 shrink-0"></i> Dekorasi & Tata Artistik Venue</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#0d9488] mt-0.5 shrink-0"></i> Koordinasi Vendor & Dokumentasi</li>
-            <li class="flex items-start gap-2 mt-2"><i data-lucide="git-branch" class="w-3.5 h-3.5 text-gray-400 mt-0.5 shrink-0"></i> <span class="text-gray-400 italic">Konsultasi / Konsep / Vendor / Gladi / Pelaksanaan</span></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
 
     <!-- Komitmen -->
     <div class="bg-[#0b2830] rounded-xl p-8 text-white text-center reveal">
