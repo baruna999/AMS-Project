@@ -9,6 +9,7 @@
   <style>body{font-family:'Plus Jakarta Sans',sans-serif;}.reveal-load{opacity:0;transform:translateY(24px);transition:opacity .9s ease-out,transform .9s ease-out;}.reveal-load.show{opacity:1;transform:translateY(0);}</style>
 </head>
 <body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
+  <!-- NAVBAR -->
   <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="index.html" class="flex items-center">
@@ -31,7 +32,20 @@
         <a href="client.html" class="text-gray-600 hover:text-[#0d9488] transition">Mitra Bisnis</a>
         <a href="galeri.html" class="text-gray-600 hover:text-[#0d9488] transition">Galeri</a>
       </nav>
-      <a href="https://wa.me/6281220832313" target="_blank" class="bg-[#0d9488] hover:bg-[#0f766e] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">Hubungi Kami</a>
+      <a href="https://wa.me/6285187273017" target="_blank" class="bg-[#0d9488] hover:bg-[#0f766e] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">Hubungi Kami</a>
+      <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Buka menu" aria-expanded="false"
+        class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 hover:bg-gray-100 active:bg-gray-200 transition">
+        <i data-lucide="more-vertical" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden absolute right-4 top-[70px] w-56 bg-white border border-gray-100 rounded-xl shadow-lg py-2 z-50">
+      <a href="index.html" class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">Beranda</a>
+      <a href="tentang-kami.html" class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">Tentang Kami</a>
+      <a href="layanan.html" class="block px-4 py-2.5 text-sm font-bold text-[#0d9488] bg-teal-50/60">Layanan</a>
+      <a href="client.html" class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">Mitra Bisnis</a>
+      <a href="galeri.html" class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">Galeri</a>
+      <div class="border-t border-gray-100 my-2"></div>
+      <a href="https://wa.me/6285187273017" target="_blank" class="block px-4 py-2.5 text-sm font-semibold text-[#0d9488] hover:bg-gray-50 transition">Hubungi Kami</a>
     </div>
   </header>
 
@@ -78,11 +92,6 @@
         </div>
       </div>
       <div class="space-y-6 reveal-load">
-        <div class="bg-[#0b1f26] text-white rounded-2xl p-6 space-y-4">
-          <h3 class="font-bold text-lg">Konsultasi Gratis</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Konsultasikan kebutuhan interior dan furniture Anda dengan tim desainer kami.</p>
-          <a href="https://wa.me/6281220832313?text=Halo,%20saya%20ingin%20konsultasi%20layanan%20Interior%20%26%20Furniture" target="_blank" class="flex items-center justify-center gap-2 w-full bg-[#0d9488] hover:bg-[#0f766e] text-white font-semibold py-3 rounded-xl transition text-sm"><i data-lucide="message-circle" class="w-4 h-4"></i> Hubungi via WhatsApp</a>
-        </div>
         <div class="border border-gray-100 rounded-2xl p-6 space-y-3">
           <h3 class="font-bold text-gray-900 text-sm">Layanan Lainnya</h3>
           <a href="layanan-konstruksi.html" class="flex items-center gap-3 py-2.5 border-b border-gray-100 text-sm text-gray-600 hover:text-[#0d9488] transition"><i data-lucide="building-2" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Konstruksi Sipil Bangunan</a>
@@ -189,6 +198,24 @@
     </div>
   </footer>
   <script>lucide.createIcons();</script>
-  <script>window.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.reveal-load').forEach(el=>requestAnimationFrame(()=>el.classList.add('show')));});</script>
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.getElementById('mobileMenuBtn');
+      const willOpen = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(willOpen));
+    }
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.getElementById('mobileMenuBtn');
+      if (!menu || !btn) return;
+      if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    window.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.reveal-load').forEach(el=>requestAnimationFrame(()=>el.classList.add('show')));});
+  </script>
 </body>
 </html>
