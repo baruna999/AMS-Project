@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advertising & Digital Print - PT. Adijaya Multijasa Solution</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .reveal-load { opacity: 0; transform: translateY(24px); transition: opacity .9s ease-out, transform .9s ease-out; }
+    .reveal-load.show { opacity: 1; transform: translateY(0); }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease-out, transform .8s ease-out; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    .gallery-img { transition: transform .4s ease, box-shadow .4s ease; }
+    .gallery-img:hover { transform: scale(1.03); box-shadow: 0 20px 40px rgba(0,0,0,.15); }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
+
+  <!-- NAVBAR -->
+  <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" height="52" aria-label="PT. Adijaya Multijasa Solution">
+          <polyline points="4,4 60,4 68,14 68,68 4,68 4,4" fill="none" stroke="#111" stroke-width="5.5" stroke-linejoin="miter"/>
+          <line x1="4" y1="50" x2="22" y2="68" stroke="#111" stroke-width="5.5" stroke-linecap="square"/>
+          <text x="12" y="54" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="24" fill="#111" letter-spacing="-1">AMS</text>
+          <text x="84" y="28" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="20" fill="#111" letter-spacing="0.5">PT. ADIJAYA</text>
+          <text x="84" y="52" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="20" fill="#111" letter-spacing="0.5">MULTIJASA</text>
+          <text x="84" y="70" font-family="Arial,sans-serif" font-weight="300" font-size="16" fill="#333" letter-spacing="3">SOLUTION</text>
+        </svg>
+      </a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="index.html" class="text-gray-600 hover:text-[#0d9488] transition">Beranda</a>
+        <a href="tentang-kami.html" class="text-gray-600 hover:text-[#0d9488] transition">Tentang Kami</a>
+        <div class="relative group">
+          <button class="flex items-center gap-1 text-[#0d9488] font-bold border-b-2 border-[#0d9488] pb-1 text-sm">
+            Layanan <svg class="w-3.5 h-3.5 mt-0.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
+            <a href="layanan.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition border-b border-gray-100"><i data-lucide="layout-grid" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Semua Layanan</a>
+            <a href="layanan-konstruksi.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition"><i data-lucide="building-2" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Konstruksi Sipil Bangunan</a>
+            <a href="layanan-advertising.html" class="flex items-center gap-3 px-4 py-3 text-sm bg-teal-50 text-[#0d9488] font-semibold transition"><i data-lucide="printer" class="w-4 h-4 shrink-0"></i> Advertising & Digital Print</a>
+            <a href="layanan-interior.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition"><i data-lucide="sofa" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Interior & Furniture Set</a>
+            <a href="layanan-pendingin.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition"><i data-lucide="wind" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Pendingin Ruangan</a>
+          </div>
+        </div>
+        <a href="client.html" class="text-gray-600 hover:text-[#0d9488] transition">Mitra Bisnis</a>
+        <a href="galeri.html" class="text-gray-600 hover:text-[#0d9488] transition">Galeri</a>
+      </nav>
+      <a href="https://wa.me/6281220832313" target="_blank" class="bg-[#0d9488] hover:bg-[#0f766e] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">Hubungi Kami</a>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="relative w-full h-72 flex items-end overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1600&q=80"
+         alt="Advertising & Digital Print" class="absolute inset-0 w-full h-full object-cover object-center">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 pb-10 w-full reveal-load">
+      <a href="layanan.html" class="inline-flex items-center gap-1.5 text-xs text-gray-300 hover:text-white mb-3 transition">
+        <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Kembali ke Semua Layanan
+      </a>
+      <p class="text-xs font-bold tracking-widest text-[#0d9488] uppercase mb-2">LAYANAN KAMI</p>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Advertising &<br>Digital Print</h1>
+      <p class="text-gray-300 text-sm mt-3 max-w-xl">Solusi percetakan dan media promosi skala besar untuk memperkuat identitas visual brand Anda — dari banner hingga huruf timbul 3D.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-grow w-full">
+
+    <!-- DESKRIPSI + SIDEBAR -->
+    <section class="max-w-7xl mx-auto px-6 py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+        <!-- Konten Utama -->
+        <div class="lg:col-span-2 space-y-10 reveal-load">
+
+          <!-- Tentang Layanan -->
+          <div>
+            <h2 class="text-2xl font-extrabold text-gray-900 mb-4">Tentang Layanan Ini</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              PT. Adijaya Multijasa Solution menyediakan layanan <strong>percetakan dan media promosi</strong> skala besar maupun menengah. Kami mengerjakan berbagai kebutuhan branding visual perusahaan dengan teknologi cetak terkini, mulai dari <em>digital printing</em> format lebar, produksi huruf timbul 3D stainless & akrilik, hingga neon box LED untuk fasad gedung dan toko.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Dengan pengalaman lebih dari 20 tahun melayani klien korporat, ritel, pemerintahan, dan UMKM di Bandung dan sekitarnya, kami memahami bahwa <strong>tampilan visual yang kuat adalah investasi bisnis</strong>. Setiap produk kami dikerjakan dengan material pilihan, finishing rapi, dan pemasangan profesional oleh tim terlatih.
+            </p>
+          </div>
+
+          <!-- Sub-layanan Detail -->
+          <div>
+            <h2 class="text-2xl font-extrabold text-gray-900 mb-6">Cakupan Layanan</h2>
+            <div class="space-y-5">
+
+              <div class="border border-gray-100 rounded-2xl p-6 hover:shadow-md transition">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 bg-[#0d9488]/10 text-[#0d9488] rounded-xl flex items-center justify-center shrink-0">
+                    <i data-lucide="printer" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-gray-900 text-base mb-1">Percetakan Besar & Menengah</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">Cetak format lebar (wide format) untuk kebutuhan outdoor maupun indoor — spanduk, banner, baliho, backdrop, wallpaper, one-way vision, dan floor graphic. Menggunakan tinta eco-solvent tahan cuaca.</p>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">Spanduk & Banner</span>
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">Backdrop Event</span>
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">Wallpaper Custom</span>
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">Floor Graphic</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border border-gray-100 rounded-2xl p-6 hover:shadow-md transition">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 bg-[#0d9488]/10 text-[#0d9488] rounded-xl flex items-center justify-center shrink-0">
+                    <i data-lucide="monitor" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-gray-900 text-base mb-1">Digital Print & Sablon</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">Cetak digital presisi tinggi untuk media promosi ukuran standar hingga custom — X-banner, roll-up banner, poster, stiker vinil, cutting sticker, dan kaus sablon event.</p>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">X-Banner & Roll-Up</span>
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">Stiker Vinil & Cutting</span>
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">Poster & Flyer</span>
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">Sablon Kaos Event</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border border-gray-100 rounded-2xl p-6 hover:shadow-md transition">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 bg-[#0d9488]/10 text-[#0d9488] rounded-xl flex items-center justify-center shrink-0">
+                    <i data-lucide="box" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-gray-900 text-base mb-1">Huruf Timbul 3D</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">Produksi huruf timbul dan logo tiga dimensi dari material akrilik, stainless steel, atau aluminium composit — cocok untuk fasad toko, kantor, hotel, dan showroom. Tersedia dengan backlit LED.</p>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">Huruf Akrilik</span>
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">Stainless Steel Letter</span>
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">Backlit LED</span>
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">Logo 3D</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border border-gray-100 rounded-2xl p-6 hover:shadow-md transition">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 bg-[#0d9488]/10 text-[#0d9488] rounded-xl flex items-center justify-center shrink-0">
+                    <i data-lucide="lightbulb" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-gray-900 text-base mb-1">Neon Box & Signage</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">Pembuatan neon box, papan nama, signage koridor, dan papan petunjuk arah (wayfinding) untuk gedung, mall, rumah sakit, dan kantor. Material aluminium frame dengan panel akrilik atau backlit film.</p>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">Neon Box LED</span>
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">Papan Nama Toko</span>
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">Wayfinding System</span>
+                      <span class="text-xs bg-teal-50 text-[#0d9488] px-2.5 py-1 rounded-full font-medium">Signage Koridor</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Alur Kerja -->
+          <div>
+            <h2 class="text-2xl font-extrabold text-gray-900 mb-6">Alur Pengerjaan</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+              <div class="flex flex-col items-center text-center p-4 bg-gray-50 rounded-xl border border-gray-100">
+                <div class="w-10 h-10 bg-[#0d9488]/10 text-[#0d9488] rounded-full flex items-center justify-center mb-2 text-sm font-bold">1</div>
+                <p class="text-xs font-semibold text-gray-700">Survey & Ukur</p>
+                <p class="text-xs text-gray-400 mt-0.5">Lokasi & dimensi</p>
+              </div>
+              <div class="flex flex-col items-center text-center p-4 bg-gray-50 rounded-xl border border-gray-100">
+                <div class="w-10 h-10 bg-[#0d9488]/10 text-[#0d9488] rounded-full flex items-center justify-center mb-2 text-sm font-bold">2</div>
+                <p class="text-xs font-semibold text-gray-700">Design Produk</p>
+                <p class="text-xs text-gray-400 mt-0.5">Konsep visual</p>
+              </div>
+              <div class="flex flex-col items-center text-center p-4 bg-gray-50 rounded-xl border border-gray-100">
+                <div class="w-10 h-10 bg-[#0d9488]/10 text-[#0d9488] rounded-full flex items-center justify-center mb-2 text-sm font-bold">3</div>
+                <p class="text-xs font-semibold text-gray-700">Pradesign</p>
+                <p class="text-xs text-gray-400 mt-0.5">Revisi & approval</p>
+              </div>
+              <div class="flex flex-col items-center text-center p-4 bg-gray-50 rounded-xl border border-gray-100">
+                <div class="w-10 h-10 bg-[#0d9488]/10 text-[#0d9488] rounded-full flex items-center justify-center mb-2 text-sm font-bold">4</div>
+                <p class="text-xs font-semibold text-gray-700">RAB</p>
+                <p class="text-xs text-gray-400 mt-0.5">Estimasi biaya</p>
+              </div>
+              <div class="flex flex-col items-center text-center p-4 bg-gray-50 rounded-xl border border-gray-100">
+                <div class="w-10 h-10 bg-[#0d9488]/10 text-[#0d9488] rounded-full flex items-center justify-center mb-2 text-sm font-bold">5</div>
+                <p class="text-xs font-semibold text-gray-700">Produksi</p>
+                <p class="text-xs text-gray-400 mt-0.5">Cetak & fabrikasi</p>
+              </div>
+              <div class="flex flex-col items-center text-center p-4 bg-[#0d9488] rounded-xl">
+                <div class="w-10 h-10 bg-white/20 text-white rounded-full flex items-center justify-center mb-2 text-sm font-bold">6</div>
+                <p class="text-xs font-semibold text-white">Alokasi</p>
+                <p class="text-xs text-white/70 mt-0.5">Pasang & serah terima</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-6 reveal-load">
+          <div class="bg-[#0b1f26] text-white rounded-2xl p-6 space-y-4">
+            <h3 class="font-bold text-lg">Konsultasi Gratis</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">Ceritakan kebutuhan promosi & branding Anda. Tim kami siap memberi rekomendasi dan estimasi biaya tanpa biaya awal.</p>
+            <a href="https://wa.me/6281220832313?text=Halo,%20saya%20ingin%20konsultasi%20layanan%20Advertising%20%26%20Digital%20Print%20AMS"
+               target="_blank" class="flex items-center justify-center gap-2 w-full bg-[#0d9488] hover:bg-[#0f766e] text-white font-semibold py-3 rounded-xl transition text-sm">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> Chat via WhatsApp
+            </a>
+            <a href="tel:+6281220832313" class="flex items-center justify-center gap-2 w-full bg-white/10 hover:bg-white/20 text-white font-semibold py-3 rounded-xl transition text-sm">
+              <i data-lucide="phone" class="w-4 h-4"></i> 081-220-832313
+            </a>
+          </div>
+
+          <div class="border border-gray-100 rounded-2xl p-6 space-y-2">
+            <h3 class="font-bold text-gray-900 text-sm mb-3">Keunggulan Kami</h3>
+            <div class="flex items-start gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i><p class="text-xs text-gray-600">Material pilihan tahan cuaca & UV</p></div>
+            <div class="flex items-start gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i><p class="text-xs text-gray-600">Tim desainer berpengalaman 10+ tahun</p></div>
+            <div class="flex items-start gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i><p class="text-xs text-gray-600">Pengerjaan cepat & tepat waktu</p></div>
+            <div class="flex items-start gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i><p class="text-xs text-gray-600">Pemasangan profesional & rapih</p></div>
+            <div class="flex items-start gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i><p class="text-xs text-gray-600">Harga kompetitif untuk semua skala</p></div>
+          </div>
+
+          <div class="border border-gray-100 rounded-2xl p-6 space-y-3">
+            <h3 class="font-bold text-gray-900 text-sm">Layanan Lainnya</h3>
+            <a href="layanan-konstruksi.html" class="flex items-center gap-3 py-2.5 border-b border-gray-100 text-sm text-gray-600 hover:text-[#0d9488] transition"><i data-lucide="building-2" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Konstruksi Sipil Bangunan</a>
+            <a href="layanan-interior.html" class="flex items-center gap-3 py-2.5 border-b border-gray-100 text-sm text-gray-600 hover:text-[#0d9488] transition"><i data-lucide="sofa" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Interior & Furniture Set</a>
+            <a href="layanan-pendingin.html" class="flex items-center gap-3 py-2.5 text-sm text-gray-600 hover:text-[#0d9488] transition"><i data-lucide="wind" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Pendingin Ruangan</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GALERI CONTOH PENGERJAAN -->
+    <section class="bg-gray-50 py-16 reveal">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <p class="text-xs font-bold tracking-widest text-[#0d9488] uppercase mb-2">PORTOFOLIO</p>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">Contoh Hasil Pengerjaan</h2>
+          <p class="text-gray-500 text-sm mt-2 max-w-xl mx-auto">Beberapa dokumentasi proyek advertising yang telah kami selesaikan untuk klien dari berbagai industri.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8">
+          <button onclick="filterGallery('all')" id="tab-all"
+            class="gallery-tab px-4 py-2 text-xs font-semibold rounded-full bg-[#0d9488] text-white transition">Semua</button>
+          <button onclick="filterGallery('banner')" id="tab-banner"
+            class="gallery-tab px-4 py-2 text-xs font-semibold rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-[#0d9488] hover:text-white hover:border-[#0d9488] transition">Spanduk & Banner</button>
+          <button onclick="filterGallery('neonbox')" id="tab-neonbox"
+            class="gallery-tab px-4 py-2 text-xs font-semibold rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-[#0d9488] hover:text-white hover:border-[#0d9488] transition">Neon Box & Signage</button>
+          <button onclick="filterGallery('huruf')" id="tab-huruf"
+            class="gallery-tab px-4 py-2 text-xs font-semibold rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-[#0d9488] hover:text-white hover:border-[#0d9488] transition">Huruf Timbul 3D</button>
+          <button onclick="filterGallery('digital')" id="tab-digital"
+            class="gallery-tab px-4 py-2 text-xs font-semibold rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-[#0d9488] hover:text-white hover:border-[#0d9488] transition">Digital Print</button>
+        </div>
+
+        <!-- Grid Galeri -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+
+          <!-- Banner 1 -->
+          <div class="gallery-item" data-cat="banner">
+            <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-white">
+              <div class="overflow-hidden h-56">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80"
+                     alt="Spanduk Event Perusahaan" class="gallery-img w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <span class="text-xs bg-teal-50 text-[#0d9488] font-semibold px-2.5 py-1 rounded-full">Spanduk & Banner</span>
+                <h4 class="font-bold text-gray-900 text-sm mt-2">Backdrop Event Perusahaan</h4>
+                <p class="text-xs text-gray-500 mt-1">Backdrop full-color untuk acara launching produk & seminar korporat. Bahan flexi korea 340gsm.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Neon Box 1 -->
+          <div class="gallery-item" data-cat="neonbox">
+            <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-white">
+              <div class="overflow-hidden h-56">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
+                     alt="Neon Box Toko" class="gallery-img w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <span class="text-xs bg-teal-50 text-[#0d9488] font-semibold px-2.5 py-1 rounded-full">Neon Box & Signage</span>
+                <h4 class="font-bold text-gray-900 text-sm mt-2">Neon Box Fasad Gedung</h4>
+                <p class="text-xs text-gray-500 mt-1">Neon box LED akrilik untuk identitas brand di fasad gedung kantor & pusat perbelanjaan.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Huruf Timbul 1 -->
+          <div class="gallery-item" data-cat="huruf">
+            <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-white">
+              <div class="overflow-hidden h-56">
+                <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=800&q=80"
+                     alt="Huruf Timbul Stainless" class="gallery-img w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <span class="text-xs bg-teal-50 text-[#0d9488] font-semibold px-2.5 py-1 rounded-full">Huruf Timbul 3D</span>
+                <h4 class="font-bold text-gray-900 text-sm mt-2">Huruf Timbul Stainless Mirror</h4>
+                <p class="text-xs text-gray-500 mt-1">Huruf timbul stainless steel mirror finish untuk lobby hotel & showroom premium.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Digital Print 1 -->
+          <div class="gallery-item" data-cat="digital">
+            <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-white">
+              <div class="overflow-hidden h-56">
+                <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80"
+                     alt="Roll-up Banner" class="gallery-img w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <span class="text-xs bg-teal-50 text-[#0d9488] font-semibold px-2.5 py-1 rounded-full">Digital Print</span>
+                <h4 class="font-bold text-gray-900 text-sm mt-2">Roll-Up Banner Pameran</h4>
+                <p class="text-xs text-gray-500 mt-1">Roll-up banner & X-banner resolusi tinggi untuk stand pameran, expo, dan showroom.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Banner 2 -->
+          <div class="gallery-item" data-cat="banner">
+            <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-white">
+              <div class="overflow-hidden h-56">
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
+                     alt="Spanduk Outdoor" class="gallery-img w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <span class="text-xs bg-teal-50 text-[#0d9488] font-semibold px-2.5 py-1 rounded-full">Spanduk & Banner</span>
+                <h4 class="font-bold text-gray-900 text-sm mt-2">Spanduk Outdoor Tahan Cuaca</h4>
+                <p class="text-xs text-gray-500 mt-1">Spanduk flexi frontlite & backlite untuk promosi outdoor jangka panjang, tahan angin dan UV.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Neon Box 2 -->
+          <div class="gallery-item" data-cat="neonbox">
+            <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-white">
+              <div class="overflow-hidden h-56">
+                <img src="https://images.unsplash.com/photo-1565992441121-4367b2a58c85?auto=format&fit=crop&w=800&q=80"
+                     alt="Signage Retail" class="gallery-img w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <span class="text-xs bg-teal-50 text-[#0d9488] font-semibold px-2.5 py-1 rounded-full">Neon Box & Signage</span>
+                <h4 class="font-bold text-gray-900 text-sm mt-2">Signage Toko Retail</h4>
+                <p class="text-xs text-gray-500 mt-1">Papan nama dan signage toko retail dengan material aluminium composite & LED strip tahan lama.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Huruf Timbul 2 -->
+          <div class="gallery-item" data-cat="huruf">
+            <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-white">
+              <div class="overflow-hidden h-56">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+                     alt="Huruf Akrilik Backlit" class="gallery-img w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <span class="text-xs bg-teal-50 text-[#0d9488] font-semibold px-2.5 py-1 rounded-full">Huruf Timbul 3D</span>
+                <h4 class="font-bold text-gray-900 text-sm mt-2">Huruf Akrilik Backlit LED</h4>
+                <p class="text-xs text-gray-500 mt-1">Huruf akrilik dengan backlit LED untuk area lobby, resepsionis, dan ruang rapat korporat.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Digital Print 2 -->
+          <div class="gallery-item" data-cat="digital">
+            <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-white">
+              <div class="overflow-hidden h-56">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
+                     alt="Stiker Kendaraan" class="gallery-img w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <span class="text-xs bg-teal-50 text-[#0d9488] font-semibold px-2.5 py-1 rounded-full">Digital Print</span>
+                <h4 class="font-bold text-gray-900 text-sm mt-2">Cutting Sticker & Vinyl Wrap</h4>
+                <p class="text-xs text-gray-500 mt-1">Stiker vinil cutting dan wrapping kendaraan operasional untuk branding fleet perusahaan.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Banner 3 -->
+          <div class="gallery-item" data-cat="banner">
+            <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-white">
+              <div class="overflow-hidden h-56">
+                <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80"
+                     alt="Wallpaper Office" class="gallery-img w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <span class="text-xs bg-teal-50 text-[#0d9488] font-semibold px-2.5 py-1 rounded-full">Spanduk & Banner</span>
+                <h4 class="font-bold text-gray-900 text-sm mt-2">Wallpaper Custom Kantor</h4>
+                <p class="text-xs text-gray-500 mt-1">Cetak wallpaper dinding custom berisi company value, visi misi, atau mural branding untuk ruang kerja.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="bg-[#0b1f26] py-16 reveal">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <p class="text-[#0d9488] text-xs font-bold tracking-widest uppercase mb-3">MULAI SEKARANG</p>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-4">Siap Memperkuat Visual Brand Anda?</h2>
+        <p class="text-gray-400 text-sm max-w-lg mx-auto mb-8">Konsultasikan kebutuhan advertising Anda bersama tim kami. Survei lokasi & estimasi biaya gratis untuk Anda.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://wa.me/6281220832313?text=Halo,%20saya%20ingin%20konsultasi%20Advertising%20%26%20Digital%20Print"
+             target="_blank"
+             class="flex items-center gap-2 bg-[#0d9488] hover:bg-[#0f766e] text-white font-semibold px-8 py-3.5 rounded-xl transition text-sm">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> Chat WhatsApp Sekarang
+          </a>
+          <a href="layanan.html"
+             class="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-xl transition text-sm">
+            <i data-lucide="layout-grid" class="w-4 h-4"></i> Lihat Semua Layanan
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0b1f26] text-gray-300 mt-auto">
+    <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-10">
+
+      <!-- Kolom 1: Brand & tagline -->
+      <div class="space-y-4 lg:col-span-3">
+        <a href="index.html" class="flex items-center mb-2">
+          <img src="image/logo-ams.png" alt="Logo PT. Adijaya Multijasa Solution" class="h-14 w-auto object-contain" style="filter: brightness(0) invert(1);">
+        </a>
+        <p class="text-sm text-gray-400 leading-relaxed" style="text-align: justify;">
+          PT. Adijaya Multijasa Solution — berdiri sejak 2003. Mitra terpercaya di bidang konstruksi sipil, advertising & digital print, design interior & furniture, pendingin ruangan serta bidang sejenis lainnya.
+        </p>
+        <div class="flex gap-3 pt-1">
+          <a href="https://www.instagram.com/adijaya_solution?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"
+             class="w-8 h-8 bg-white/10 hover:bg-[#0d9488] rounded-full flex items-center justify-center transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/6281220832313" target="_blank"
+             class="w-8 h-8 bg-white/10 hover:bg-[#0d9488] rounded-full flex items-center justify-center transition">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+          </a>
+          <a href="mailto:ptadijayamultijasasolution@gmail.com"
+             class="w-8 h-8 bg-white/10 hover:bg-[#0d9488] rounded-full flex items-center justify-center transition">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Kolom 2: Informasi Perusahaan -->
+      <div class="space-y-4 lg:col-span-3">
+        <h4 class="font-bold text-white text-sm">PT. Adijaya Multijasa Solution</h4>
+        <div class="space-y-3 text-sm text-gray-400">
+          <div>
+            <p class="font-semibold text-gray-300 mb-0.5">Kantor</p>
+            <p>Perum. Margaasih Blok D8-9<br>Jati Asri, Kab. Bandung</p>
+          </div>
+          <div>
+            <a href="https://maps.app.goo.gl/tDFBKyKKD2wgf1Lv9" target="_blank" class="hover:text-[#0d9488] transition">
+              <p class="font-semibold text-gray-300 mb-0.5">Workshop</p>
+              <p>Jl. Kawat No.6, Caringin,<br>Kec. Bandung Kulon,<br>Kota Bandung 40212</p>
+            </a>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-300 mb-0.5">Jam Kerja</p>
+            <p>Senin – Jumat: 08.00 – 17.00<br>Sabtu: 08.00 – 14.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolom 3: Menu Utama -->
+      <div class="space-y-4 lg:col-span-2">
+        <h4 class="font-bold text-white text-sm">Menu Utama</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="index.html" class="hover:text-[#0d9488] transition">Beranda</a></li>
+          <li><a href="tentang-kami.html" class="hover:text-[#0d9488] transition">Tentang Kami</a></li>
+          <li><a href="layanan.html" class="hover:text-[#0d9488] transition">Layanan Kami</a></li>
+          <li><a href="client.html" class="hover:text-[#0d9488] transition">Klien & Mitra</a></li>
+          <li><a href="galeri.html" class="hover:text-[#0d9488] transition">Galeri Pekerjaan</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 4: Kontak -->
+      <div class="space-y-4 lg:col-span-4">
+        <h4 class="font-bold text-white text-sm">Hubungi Kami</h4>
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li class="flex items-start gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i>
+            <a href="tel:+6281220832313" class="hover:text-[#0d9488] transition">081-220-832313</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="mail" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i>
+            <a href="mailto:ptadijayamultijasasolution@gmail.com" class="hover:text-[#0d9488] transition break-all">ptadijayamultijasasolution@gmail.com</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <a href="https://www.instagram.com/adijaya_solution?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-[#0d9488] transition">@adijaya.solution</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="badge-check" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i>
+            <span>Status: Terdaftar sebagai Pengusaha Kena Pajak</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
+        <p>&copy; 2026 PT. Adijaya Multijasa Solution. Hak Cipta Dilindungi.</p>
+        <p>NPWP: 40.067.541.9-445.000</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+  <script>
+    // Reveal animations
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.reveal-load').forEach(el => requestAnimationFrame(() => el.classList.add('show')));
+    });
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); revealObs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    // Gallery filter
+    function filterGallery(cat) {
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (cat === 'all' || item.dataset.cat === cat) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+      document.querySelectorAll('.gallery-tab').forEach(btn => {
+        btn.classList.remove('bg-[#0d9488]', 'text-white');
+        btn.classList.add('bg-white', 'border', 'border-gray-200', 'text-gray-600');
+      });
+      const active = document.getElementById('tab-' + cat);
+      if (active) {
+        active.classList.add('bg-[#0d9488]', 'text-white');
+        active.classList.remove('bg-white', 'border', 'border-gray-200', 'text-gray-600');
+      }
+    }
+  </script>
+</body>
+</html>
