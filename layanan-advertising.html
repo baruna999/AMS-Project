@@ -9,10 +9,10 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .reveal-load { opacity: 0; transform: translateY(24px); transition: opacity .9s ease-out, transform .9s ease-out; }
-    .reveal-load.show { opacity: 1; transform: translateY(0); }
-    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease-out, transform .8s ease-out; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
     .reveal.show { opacity: 1; transform: translateY(0); }
+    .reveal-load { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease-out, transform 0.9s ease-out; }
+    .reveal-load.show { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
@@ -95,7 +95,10 @@
 
           <!-- Sub-layanan Detail -->
           <div>
+            <div class="reveal">
             <h2 class="text-2xl font-extrabold text-gray-900 mb-6">Cakupan Layanan</h2>
+            </div>
+
             <div class="space-y-5">
 
               <div class="border border-gray-100 rounded-2xl p-6 hover:shadow-md transition">
@@ -103,7 +106,7 @@
                   <div class="w-12 h-12 bg-[#0d9488]/10 text-[#0d9488] rounded-xl flex items-center justify-center shrink-0">
                     <i data-lucide="printer" class="w-6 h-6"></i>
                   </div>
-                  <div>
+                  <div class="reveal">
                     <h3 class="font-bold text-gray-900 text-base mb-1">Percetakan Besar & Menengah</h3>
                     <p class="text-sm text-gray-600 leading-relaxed mb-3">Cetak format lebar (wide format) untuk kebutuhan outdoor maupun indoor — spanduk, banner, baliho, backdrop, wallpaper, one-way vision, dan floor graphic. Menggunakan tinta eco-solvent tahan cuaca.</p>
                     <div class="flex flex-wrap gap-2">
@@ -121,7 +124,7 @@
                   <div class="w-12 h-12 bg-[#0d9488]/10 text-[#0d9488] rounded-xl flex items-center justify-center shrink-0">
                     <i data-lucide="monitor" class="w-6 h-6"></i>
                   </div>
-                  <div>
+                  <div class="reveal">
                     <h3 class="font-bold text-gray-900 text-base mb-1">Digital Print & Sablon</h3>
                     <p class="text-sm text-gray-600 leading-relaxed mb-3">Cetak digital presisi tinggi untuk media promosi ukuran standar hingga custom — X-banner, roll-up banner, poster, stiker vinil, cutting sticker, dan kaus sablon event.</p>
                     <div class="flex flex-wrap gap-2">
@@ -139,7 +142,7 @@
                   <div class="w-12 h-12 bg-[#0d9488]/10 text-[#0d9488] rounded-xl flex items-center justify-center shrink-0">
                     <i data-lucide="box" class="w-6 h-6"></i>
                   </div>
-                  <div>
+                  <div class="reveal">
                     <h3 class="font-bold text-gray-900 text-base mb-1">Huruf Timbul 3D</h3>
                     <p class="text-sm text-gray-600 leading-relaxed mb-3">Produksi huruf timbul dan logo tiga dimensi dari material akrilik, stainless steel, atau aluminium composit — cocok untuk fasad toko, kantor, hotel, dan showroom. Tersedia dengan backlit LED.</p>
                     <div class="flex flex-wrap gap-2">
@@ -157,7 +160,7 @@
                   <div class="w-12 h-12 bg-[#0d9488]/10 text-[#0d9488] rounded-xl flex items-center justify-center shrink-0">
                     <i data-lucide="lightbulb" class="w-6 h-6"></i>
                   </div>
-                  <div>
+                  <div class="reveal">
                     <h3 class="font-bold text-gray-900 text-base mb-1">Neon Box & Signage</h3>
                     <p class="text-sm text-gray-600 leading-relaxed mb-3">Pembuatan neon box, papan nama, signage koridor, dan papan petunjuk arah (wayfinding) untuk gedung, mall, rumah sakit, dan kantor. Material aluminium frame dengan panel akrilik atau backlit film.</p>
                     <div class="flex flex-wrap gap-2">
@@ -174,7 +177,7 @@
           </div>
 
           <!-- Alur Kerja -->
-          <div>
+          <div class="reveal">
             <h2 class="text-2xl font-extrabold text-gray-900 mb-6">Alur Pengerjaan</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
               <div class="flex flex-col items-center text-center p-4 bg-gray-50 rounded-xl border border-gray-100">
@@ -213,9 +216,9 @@
         </div>
 
         <!-- Sidebar -->
-        <div class="space-y-6 reveal-load">
+        <div class="space-y-6">
 
-          <div class="border border-gray-100 rounded-2xl p-6 space-y-2">
+          <div class="border border-gray-100 rounded-2xl p-6 space-y-2 reveal-load">
             <h3 class="font-bold text-gray-900 text-sm mb-3">Keunggulan Kami</h3>
             <div class="flex items-start gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i><p class="text-xs text-gray-600">Material pilihan tahan cuaca & UV</p></div>
             <div class="flex items-start gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i><p class="text-xs text-gray-600">Tim desainer berpengalaman 10+ tahun</p></div>
@@ -224,7 +227,7 @@
             <div class="flex items-start gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i><p class="text-xs text-gray-600">Harga kompetitif untuk semua skala</p></div>
           </div>
 
-          <div class="border border-gray-100 rounded-2xl p-6 space-y-3">
+          <div class="border border-gray-100 rounded-2xl p-6 space-y-3 reveal">
             <h3 class="font-bold text-gray-900 text-sm">Layanan Lainnya</h3>
             <a href="layanan-konstruksi.html" class="flex items-center gap-3 py-2.5 border-b border-gray-100 text-sm text-gray-600 hover:text-[#0d9488] transition"><i data-lucide="building-2" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Konstruksi Sipil Bangunan</a>
             <a href="layanan-interior.html" class="flex items-center gap-3 py-2.5 border-b border-gray-100 text-sm text-gray-600 hover:text-[#0d9488] transition"><i data-lucide="sofa" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Interior & Furniture Set</a>
@@ -242,7 +245,7 @@
 
   <!-- FOOTER -->
   <footer class="bg-[#0b1f26] text-gray-300 mt-auto">
-    <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-10">
+    <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-10 reveal">
 
       <!-- Kolom 1: Brand & tagline -->
       <div class="space-y-4 lg:col-span-3">
@@ -337,15 +340,20 @@
 
   <script>lucide.createIcons();</script>
   <script>
-    // Reveal animations
     window.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.reveal-load').forEach(el => requestAnimationFrame(() => el.classList.add('show')));
     });
-    const revealObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); revealObs.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   </script>
 </body>
 </html>
