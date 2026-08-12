@@ -4,391 +4,1410 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mitra Bisnis - PT. Adijaya Multijasa Solution</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <script src="https://unpkg.com/lucide@latest"></script>
+
   <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-    .reveal.show { opacity: 1; transform: translateY(0); }
-    .reveal-load { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease-out, transform 0.9s ease-out; }
-    .reveal-load.show { opacity: 1; transform: translateY(0); }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-load {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+    }
+
+    .reveal-load.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Area logo klien */
+    .client-logo {
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 8px;
+    }
+
+    .client-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   </style>
 </head>
+
 <body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
 
   <!-- NAVBAR -->
   <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
       <a href="index.html" class="flex items-center">
-        <img src="image/logo-ams.png" alt="Logo PT. Adijaya Multijasa Solution" class="h-12  w-auto object-contain ml-5">
+        <img
+          src="image/logo-ams.png"
+          alt="Logo PT. Adijaya Multijasa Solution"
+          class="h-12 w-auto object-contain ml-5"
+        >
       </a>
+
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-        <a href="index.html" class="text-gray-600 hover:text-[#0d9488] transition">Beranda</a>
-        <a href="tentang-kami.html" class="text-gray-600 hover:text-[#0d9488] transition">Tentang Kami</a>
+
+        <a href="index.html"
+           class="text-gray-600 hover:text-[#0d9488] transition">
+          Beranda
+        </a>
+
+        <a href="tentang-kami.html"
+           class="text-gray-600 hover:text-[#0d9488] transition">
+          Tentang Kami
+        </a>
+
         <!-- Layanan Dropdown -->
         <div class="relative group">
-          <button class="flex items-center gap-1 text-gray-600 hover:text-[#0d9488] transition font-medium text-sm">
+
+          <button
+            class="flex items-center gap-1 text-gray-600 hover:text-[#0d9488] transition font-medium text-sm">
+
             Layanan
-            <svg class="w-3.5 h-3.5 mt-0.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+
+            <svg
+              class="w-3.5 h-3.5 mt-0.5 transition-transform group-hover:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              viewBox="0 0 24 24">
+
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+
+            </svg>
+
           </button>
-          <div class="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
-            <a href="layanan.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition border-b border-gray-100">
-              <i data-lucide="layout-grid" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Semua Layanan
+
+          <div
+            class="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
+
+            <a
+              href="layanan.html"
+              class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition border-b border-gray-100">
+
+              <i data-lucide="layout-grid"
+                 class="w-4 h-4 text-[#0d9488] shrink-0"></i>
+
+              Semua Layanan
+
             </a>
-            <a href="layanan-konstruksi.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
-              <i data-lucide="building-2" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Konstruksi Sipil Bangunan
+
+            <a
+              href="layanan-konstruksi.html"
+              class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
+
+              <i data-lucide="building-2"
+                 class="w-4 h-4 text-[#0d9488] shrink-0"></i>
+
+              Konstruksi Sipil Bangunan
+
             </a>
-            <a href="layanan-advertising.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
-              <i data-lucide="printer" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Advertising & Digital Print
+
+            <a
+              href="layanan-advertising.html"
+              class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
+
+              <i data-lucide="printer"
+                 class="w-4 h-4 text-[#0d9488] shrink-0"></i>
+
+              Advertising & Digital Print
+
             </a>
-            <a href="layanan-interior.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
-              <i data-lucide="sofa" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Interior & Furniture Set
+
+            <a
+              href="layanan-interior.html"
+              class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
+
+              <i data-lucide="sofa"
+                 class="w-4 h-4 text-[#0d9488] shrink-0"></i>
+
+              Interior & Furniture Set
+
             </a>
-            <a href="layanan-pendingin.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
-              <i data-lucide="wind" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Pendingin Ruangan
+
+            <a
+              href="layanan-pendingin.html"
+              class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
+
+              <i data-lucide="wind"
+                 class="w-4 h-4 text-[#0d9488] shrink-0"></i>
+
+              Pendingin Ruangan
+
             </a>
-            <a href="layanan-wedding.html" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
-              <i data-lucide="heart" class="w-4 h-4 text-[#0d9488] shrink-0"></i> Wedding Organizer
+
+            <a
+              href="layanan-wedding.html"
+              class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0d9488] transition">
+
+              <i data-lucide="heart"
+                 class="w-4 h-4 text-[#0d9488] shrink-0"></i>
+
+              Wedding Organizer
+
             </a>
+
           </div>
         </div>
-        <a href="client.html" class="text-[#0d9488] font-bold border-b-2 border-[#0d9488] pb-1">Mitra Bisnis</a>
-        <a href="galeri.html" class="text-gray-600 hover:text-[#0d9488] transition">Galeri</a>
+
+        <a
+          href="client.html"
+          class="text-[#0d9488] font-bold border-b-2 border-[#0d9488] pb-1">
+          Mitra Bisnis
+        </a>
+
+        <a
+          href="galeri.html"
+          class="text-gray-600 hover:text-[#0d9488] transition">
+          Galeri
+        </a>
+
       </nav>
-      <a href="https://wa.me/6285187273017" target="_blank" class="bg-[#0d9488] hover:bg-[#0f766e] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">Hubungi Kami</a>
-      <!-- Tombol menu mobile (titik tiga) -->
-      <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Buka menu" aria-expanded="false"
+
+      <a
+        href="https://wa.me/6285187273017"
+        target="_blank"
+        class="bg-[#0d9488] hover:bg-[#0f766e] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">
+        Hubungi Kami
+      </a>
+
+      <!-- Tombol menu mobile -->
+      <button
+        id="mobileMenuBtn"
+        onclick="toggleMobileMenu()"
+        aria-label="Buka menu"
+        aria-expanded="false"
         class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 hover:bg-gray-100 active:bg-gray-200 transition">
+
         <i data-lucide="more-vertical" class="w-6 h-6"></i>
+
       </button>
+
     </div>
+
     <!-- Dropdown menu mobile -->
-    <div id="mobileMenu" class="hidden md:hidden absolute right-4 top-[70px] w-56 bg-white border border-gray-100 rounded-xl shadow-lg py-2 z-50">
-      <a href="index.html" class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">Beranda</a>
-      <a href="tentang-kami.html" class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">Tentang Kami</a>
-      <a href="layanan.html" class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">Layanan</a>
-      <a href="client.html" class="block px-4 py-2.5 text-sm font-bold text-[#0d9488] bg-teal-50/60">Mitra Bisnis</a>
-      <a href="galeri.html" class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">Galeri</a>
+    <div
+      id="mobileMenu"
+      class="hidden md:hidden absolute right-4 top-[70px] w-56 bg-white border border-gray-100 rounded-xl shadow-lg py-2 z-50">
+
+      <a href="index.html"
+         class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">
+        Beranda
+      </a>
+
+      <a href="tentang-kami.html"
+         class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">
+        Tentang Kami
+      </a>
+
+      <a href="layanan.html"
+         class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">
+        Layanan
+      </a>
+
+      <a href="client.html"
+         class="block px-4 py-2.5 text-sm font-bold text-[#0d9488] bg-teal-50/60">
+        Mitra Bisnis
+      </a>
+
+      <a href="galeri.html"
+         class="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d9488] transition">
+        Galeri
+      </a>
+
       <div class="border-t border-gray-100 my-2"></div>
-      <a href="https://wa.me/6285187273017" target="_blank" class="block px-4 py-2.5 text-sm font-semibold text-[#0d9488] hover:bg-gray-50 transition">Hubungi Kami</a>
+
+      <a
+        href="https://wa.me/6285187273017"
+        target="_blank"
+        class="block px-4 py-2.5 text-sm font-semibold text-[#0d9488] hover:bg-gray-50 transition">
+        Hubungi Kami
+      </a>
+
     </div>
   </header>
 
+
   <!-- PAGE HEADER -->
   <section class="relative w-full h-64 flex items-end overflow-hidden">
-    <img src="image/mitra-bisnis.jpg" alt="Mitra Bisnis" class="absolute inset-0 w-full h-full object-cover object-center">
+
+    <img
+      src="image/mitra-bisnis.jpg"
+      alt="Mitra Bisnis"
+      class="absolute inset-0 w-full h-full object-cover object-center">
+
     <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
-    <div class="relative z-10 max-w-7xl mx-auto px-6 pb-10 w-full reveal-load">
-      <p class="text-xs font-bold tracking-widest text-[#0d9488] uppercase mb-2">MITRA BISNIS</p>
-      <h1 class="text-3xl md:text-4xl font-extrabold text-white">Dipercaya Oleh Berbagai Industri</h1>
-      <p class="text-gray-300 text-sm mt-2 max-w-2xl">Kepercayaan dari mitra bisnis kami adalah bukti nyata dedikasi dan kualitas kerja yang kami hadirkan.</p>
+
+    <div
+      class="relative z-10 max-w-7xl mx-auto px-6 pb-10 w-full reveal-load">
+
+      <p class="text-xs font-bold tracking-widest text-[#0d9488] uppercase mb-2">
+        MITRA BISNIS
+      </p>
+
+      <h1 class="text-3xl md:text-4xl font-extrabold text-white">
+        Dipercaya Oleh Berbagai Industri
+      </h1>
+
+      <p class="text-gray-300 text-sm mt-2 max-w-2xl">
+        Kepercayaan dari mitra bisnis kami adalah bukti nyata dedikasi dan kualitas kerja yang kami hadirkan.
+      </p>
+
     </div>
   </section>
+
 
   <!-- MAIN CONTENT -->
   <main class="flex-grow max-w-7xl mx-auto px-6 py-12 space-y-16">
 
     <!-- STATS COUNTER -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
       <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 reveal-load">
         <h2 class="text-3xl font-extrabold text-[#0d9488]">20+</h2>
         <p class="text-xs text-gray-500 mt-1 font-medium">Mitra Bisnis</p>
       </div>
+
       <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 reveal-load">
         <h2 class="text-3xl font-extrabold text-[#0d9488]">2003</h2>
         <p class="text-xs text-gray-500 mt-1 font-medium">Tahun Berdiri</p>
       </div>
+
       <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 reveal-load">
         <h2 class="text-3xl font-extrabold text-[#0d9488]">20+</h2>
         <p class="text-xs text-gray-500 mt-1 font-medium">Tahun Pengalaman</p>
       </div>
+
       <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 reveal-load">
         <h2 class="text-3xl font-extrabold text-[#0d9488]">PKP</h2>
         <p class="text-xs text-gray-500 mt-1 font-medium">Status Perusahaan</p>
       </div>
+
     </div>
+
 
     <!-- DAFTAR KLIEN -->
     <div class="reveal-load">
-      <h3 class="text-xl font-bold text-gray-900 mb-2">Daftar Klien & Mitra Bisnis</h3>
-      <p class="text-sm text-gray-500 mb-8">Perusahaan dan instansi yang telah mempercayakan kebutuhan mereka kepada kami.</p>
+
+      <h3 class="text-xl font-bold text-gray-900 mb-2">
+        Daftar Klien & Mitra Bisnis
+      </h3>
+
+      <p class="text-sm text-gray-500 mb-8">
+        Perusahaan dan instansi yang telah mempercayakan kebutuhan mereka kepada kami.
+      </p>
+
+
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+
+        <!-- BTN -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Bank Tabungan Negara / BTN</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2010</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Bank Tabungan Negara / BTN
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2010
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan & Peremajaan
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/bank-btn.png" alt="Logo BTN">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan & Peremajaan</p>
+
         </div>
+
+
+        <!-- DINKES BANDUNG -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Dinas Kesehatan Kab. Bandung</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2013</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Dinas Kesehatan Kab. Bandung
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2013
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan ATK
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/dinkes-kabandung.jpg" alt="Logo Dinas Kesehatan Kabupaten Bandung">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan ATK</p>
+
         </div>
+
+
+        <!-- DINAS PERUMAHAN -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Dinas Perumahan Kab. Bandung</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2013</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Dinas Perumahan Kab. Bandung
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2013
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan ATK
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/disperkimtan.jpg" alt="Logo Dinas Perumahan Kabupaten Bandung">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan ATK</p>
+
         </div>
+
+
+        <!-- PANDIGA -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Pandiga Educreation Sports</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2012</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Pandiga Educreation Sports
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2012
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/pandiga.jpg" alt="Logo Pandiga Educreation Sports">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan</p>
+
         </div>
+
+
+        <!-- MITRA KARYA -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">PT. Mitra Karya Prospekta</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2015</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  PT. Mitra Karya Prospekta
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2015
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan ATK
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/mkp.jpg" alt="Logo PT. Mitra Karya Prospekta">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan ATK</p>
+
         </div>
+
+
+        <!-- LPMP -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">LPMP Jawa Barat / Dinas Pendidikan</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2017</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  LPMP Jawa Barat / Dinas Pendidikan
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2017
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan Buku Jurnal
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/bbpmp.jpg" alt="Logo LPMP Jawa Barat">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan Buku Jurnal</p>
+
         </div>
+
+
+        <!-- NURTANIO -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Universitas Nurtanio Bandung</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2017</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Universitas Nurtanio Bandung
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2017
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan ATK
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/unnur.png" alt="Logo Universitas Nurtanio Bandung">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan ATK</p>
+
         </div>
+
+
+        <!-- POLRES CIBABAT -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Polres Cibabat</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2017</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Polres Cibabat
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2017
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan ATK
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/polres-cibabat.jpg" alt="Logo Polres Cibabat">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan ATK</p>
+
         </div>
+
+
+        <!-- BNN CIMAHI -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Badan Narkotika Nasional Kota Cimahi</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2018</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Badan Narkotika Nasional Kota Cimahi
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2018
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan ATK
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/bnn-cimahi.jpg" alt="Logo BNN Kota Cimahi">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan ATK</p>
+
         </div>
+
+
+        <!-- BANDARA HUSEIN -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Bandara Husein Sastranegara</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2018</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Bandara Husein Sastranegara
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2018
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/husein-sastranegara-airport.png" alt="Logo Bandara Husein Sastranegara">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan</p>
+
         </div>
+
+
+        <!-- FORESTER -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Forester Outdoor Gear</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2018</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Forester Outdoor Gear
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2018
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan ATK
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/forester.jpg" alt="Logo Forester Outdoor Gear">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan ATK</p>
+
         </div>
+
+
+        <!-- MITSUBISHI -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Mitsubishi Palasari</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2019</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Mitsubishi Palasari
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2019
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan & Peremajaan Asset
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/mitsubishi-palasari.png" alt="Logo Mitsubishi Palasari">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan & Peremajaan Asset</p>
+
         </div>
+
+
+        <!-- AEROTERRASCAN -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Aeroterrascan</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2019</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Aeroterrascan
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2019
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/logo-aeroterrascan.png" alt="Logo Aeroterrascan">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan</p>
+
         </div>
+
+
+        <!-- AUTO SULTAN -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Auto Sultan / Rich Bean Cafe</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2019</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Auto Sultan / Rich Bean Cafe
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2019
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan Sipil / Interior
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/rich-bean.jpg" alt="Logo Auto Sultan">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan Sipil / Interior</p>
+
         </div>
+
+
+        <!-- PIZZA HUT -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Pizza Hut / Gudang Basah</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2020</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Pizza Hut / Gudang Basah
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2020
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pendingin Ruangan & Sipil
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/pizza-hut.jpg" alt="Logo Pizza Hut">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pendingin Ruangan & Sipil</p>
+
         </div>
+
+
+        <!-- BURGER KING -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Burger King Resto Cirebon</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2020</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Burger King Resto Cirebon
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2020
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pendingin Ruangan & Sipil
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/bkcirebon.jpg" alt="Logo Burger King">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pendingin Ruangan & Sipil</p>
+
         </div>
+
+
+        <!-- AYAM CRISBAR -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Ayam Crisbar Resto Kopo</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2020</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Ayam Crisbar Resto Kopo
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2020
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan Media Promo
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/crisbar.jpg" alt="Logo Ayam Crisbar">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan Media Promo</p>
+
         </div>
+
+
+        <!-- UNPAD -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Fakultas Kedokteran UNPAD</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2020</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Fakultas Kedokteran UNPAD
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2020
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/fk-unpad.jpg" alt="Logo Universitas Padjadjaran">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan</p>
+
         </div>
+
+
+        <!-- HISANA -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Hisana Fried Chicken</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2021</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Hisana Fried Chicken
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2021
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan Gerai & Media Promo
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/hisana.jpg" alt="Logo Hisana Fried Chicken">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan Gerai & Media Promo</p>
+
         </div>
+
+
+        <!-- GRAB -->
         <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:shadow-md transition reveal">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h4 class="font-bold text-gray-900 text-sm">Grab Main Office Pascal Bandung</h4>
-            <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">Sejak 2021</span>
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div class="min-w-0 flex-1">
+
+              <div class="flex items-start justify-between gap-3 mb-3">
+
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Grab Main Office Pascal Bandung
+                </h4>
+
+                <span class="text-[10px] bg-[#0d9488]/10 text-[#0d9488] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                  Sejak 2021
+                </span>
+
+              </div>
+
+              <p class="text-xs text-gray-500">
+                Pengadaan Media Promo
+              </p>
+
+            </div>
+
+            <div class="client-logo">
+              <img src="image/grab.png" alt="Logo Grab">
+            </div>
+
           </div>
-          <p class="text-xs text-gray-500">Pengadaan Media Promo</p>
+
         </div>
+
+
       </div>
     </div>
+
   </main>
+
 
   <!-- FOOTER -->
   <footer class="bg-[#0b1f26] text-gray-300 mt-auto">
+
     <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-10 reveal">
 
-      <!-- Kolom 1: Brand & tagline -->
+      <!-- Kolom 1 -->
       <div class="space-y-4 lg:col-span-3">
+
         <a href="index.html" class="flex items-center mb-2">
-          <img src="image/logo-ams.png" alt="Logo PT. Adijaya Multijasa Solution" class="h-14 w-auto object-contain" style="filter: brightness(0) invert(1);">
+
+          <img
+            src="image/logo-ams.png"
+            alt="Logo PT. Adijaya Multijasa Solution"
+            class="h-14 w-auto object-contain"
+            style="filter: brightness(0) invert(1);">
+
         </a>
-        <p class="text-sm text-gray-400 leading-relaxed" style="text-align: justify;">
-          PT. Adijaya Multijasa Solution — berdiri sejak 2003. Mitra terpercaya di bidang konstruksi sipil, advertising & digital print, design interior & furniture, pendingin ruangan serta bidang sejenis lainnya.
+
+        <p
+          class="text-sm text-gray-400 leading-relaxed"
+          style="text-align: justify;">
+
+          PT. Adijaya Multijasa Solution — berdiri sejak 2003.
+          Mitra terpercaya di bidang konstruksi sipil, advertising & digital print,
+          design interior & furniture, pendingin ruangan serta bidang sejenis lainnya.
+
         </p>
+
         <!-- Social -->
         <div class="flex gap-3 pt-1">
-          <a href="https://www.instagram.com/adijaya_solution?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"
-             class="w-8 h-8 bg-white/10 hover:bg-[#0d9488] rounded-full flex items-center justify-center transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+
+          <a
+            href="https://www.instagram.com/adijaya_solution?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            class="w-8 h-8 bg-white/10 hover:bg-[#0d9488] rounded-full flex items-center justify-center transition">
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+
+            </svg>
+
           </a>
-          <a href="https://wa.me/6281220832313" target="_blank"
-             class="w-8 h-8 bg-white/10 hover:bg-[#0d9488] rounded-full flex items-center justify-center transition">
+
+          <a
+            href="https://wa.me/6281220832313"
+            target="_blank"
+            class="w-8 h-8 bg-white/10 hover:bg-[#0d9488] rounded-full flex items-center justify-center transition">
+
             <i data-lucide="message-circle" class="w-4 h-4"></i>
+
           </a>
-          <a href="mailto:ptadijayamultijasasolution@gmail.com"
-             class="w-8 h-8 bg-white/10 hover:bg-[#0d9488] rounded-full flex items-center justify-center transition">
+
+          <a
+            href="mailto:ptadijayamultijasasolution@gmail.com"
+            class="w-8 h-8 bg-white/10 hover:bg-[#0d9488] rounded-full flex items-center justify-center transition">
+
             <i data-lucide="mail" class="w-4 h-4"></i>
+
           </a>
+
         </div>
+
       </div>
 
-      <!-- Kolom 2: Informasi Perusahaan -->
+
+      <!-- Kolom 2 -->
       <div class="space-y-4 lg:col-span-3">
-        <h4 class="font-bold text-white text-sm">PT. Adijaya Multijasa Solution</h4>
+
+        <h4 class="font-bold text-white text-sm">
+          PT. Adijaya Multijasa Solution
+        </h4>
+
         <div class="space-y-3 text-sm text-gray-400">
+
           <div>
-            <p class="font-semibold text-gray-300 mb-0.5">Kantor</p>
-            <p>Perum. Margaasih Blok D8-9<br>Jati Asri, Kab. Bandung</p>
+            <p class="font-semibold text-gray-300 mb-0.5">
+              Kantor
+            </p>
+
+            <p>
+              Perum. Margaasih Blok D8-9<br>
+              Jati Asri, Kab. Bandung
+            </p>
           </div>
+
           <div>
-            <a href="https://maps.app.goo.gl/tDFBKyKKD2wgf1Lv9" target="_blank" class="hover:text-[#0d9488] transition">
-              <p class="font-semibold text-gray-300 mb-0.5">Workshop</p>
-              <p>Jl. Kawat No.6, Caringin,<br>Kec. Bandung Kulon,<br>Kota Bandung 40212</p>
+
+            <a
+              href="https://maps.app.goo.gl/tDFBKyKKD2wgf1Lv9"
+              target="_blank"
+              class="hover:text-[#0d9488] transition">
+
+              <p class="font-semibold text-gray-300 mb-0.5">
+                Workshop
+              </p>
+
+              <p>
+                Jl. Kawat No.6, Caringin,<br>
+                Kec. Bandung Kulon,<br>
+                Kota Bandung 40212
+              </p>
+
             </a>
+
           </div>
+
           <div>
-            <p class="font-semibold text-gray-300 mb-0.5">Jam Kerja</p>
-            <p>Senin – Jumat: 08.00 – 17.00<br>Sabtu: 08.00 – 14.00</p>
+
+            <p class="font-semibold text-gray-300 mb-0.5">
+              Jam Kerja
+            </p>
+
+            <p>
+              Senin – Jumat: 08.00 – 17.00<br>
+              Sabtu: 08.00 – 14.00
+            </p>
+
           </div>
+
         </div>
+
       </div>
 
-      <!-- Kolom 3: Menu Utama -->
+
+      <!-- Kolom 3 -->
       <div class="space-y-4 lg:col-span-2">
-        <h4 class="font-bold text-white text-sm">Menu Utama</h4>
+
+        <h4 class="font-bold text-white text-sm">
+          Menu Utama
+        </h4>
+
         <ul class="space-y-2 text-sm text-gray-400">
-          <li><a href="index.html" class="hover:text-[#0d9488] transition">Beranda</a></li>
-          <li><a href="tentang-kami.html" class="hover:text-[#0d9488] transition">Tentang Kami</a></li>
-          <li><a href="layanan.html" class="hover:text-[#0d9488] transition">Layanan Kami</a></li>
-          <li><a href="client.html" class="hover:text-[#0d9488] transition">Klien & Mitra</a></li>
-          <li><a href="galeri.html" class="hover:text-[#0d9488] transition">Galeri Pekerjaan</a></li>
+
+          <li>
+            <a href="index.html" class="hover:text-[#0d9488] transition">
+              Beranda
+            </a>
+          </li>
+
+          <li>
+            <a href="tentang-kami.html" class="hover:text-[#0d9488] transition">
+              Tentang Kami
+            </a>
+          </li>
+
+          <li>
+            <a href="layanan.html" class="hover:text-[#0d9488] transition">
+              Layanan Kami
+            </a>
+          </li>
+
+          <li>
+            <a href="client.html" class="hover:text-[#0d9488] transition">
+              Klien & Mitra
+            </a>
+          </li>
+
+          <li>
+            <a href="galeri.html" class="hover:text-[#0d9488] transition">
+              Galeri Pekerjaan
+            </a>
+          </li>
+
         </ul>
+
       </div>
 
-      <!-- Kolom 4: Kontak -->
+
+      <!-- Kolom 4 -->
       <div class="space-y-4 lg:col-span-4">
-        <h4 class="font-bold text-white text-sm">Hubungi Kami</h4>
+
+        <h4 class="font-bold text-white text-sm">
+          Hubungi Kami
+        </h4>
+
         <ul class="space-y-3 text-sm text-gray-400">
+
           <li class="flex items-start gap-2">
-            <i data-lucide="phone" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i>
-            <a href="tel:+6281220832313" class="hover:text-[#0d9488] transition">081-220-832313</a>
+
+            <i
+              data-lucide="phone"
+              class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5">
+            </i>
+
+            <a
+              href="tel:+6281220832313"
+              class="hover:text-[#0d9488] transition">
+              081-220-832313
+            </a>
+
           </li>
+
           <li class="flex items-start gap-2">
-            <i data-lucide="mail" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i>
-            <a href="mailto:ptadijayamultijasasolution@gmail.com" class="hover:text-[#0d9488] transition break-all">ptadijayamultijasasolution@gmail.com</a>
+
+            <i
+              data-lucide="mail"
+              class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5">
+            </i>
+
+            <a
+              href="mailto:ptadijayamultijasasolution@gmail.com"
+              class="hover:text-[#0d9488] transition break-all">
+              ptadijayamultijasasolution@gmail.com
+            </a>
+
           </li>
+
           <li class="flex items-start gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            <a href="https://www.instagram.com/adijaya_solution?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-[#0d9488] transition">@adijaya.solution</a>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+
+            </svg>
+
+            <a
+              href="https://www.instagram.com/adijaya_solution?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              class="hover:text-[#0d9488] transition">
+
+              @adijaya.solution
+
+            </a>
+
           </li>
+
           <li class="flex items-start gap-2">
-            <i data-lucide="badge-check" class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5"></i>
-            <span>Status: Terdaftar sebagai Pengusaha Kena Pajak</span>
+
+            <i
+              data-lucide="badge-check"
+              class="w-4 h-4 text-[#0d9488] shrink-0 mt-0.5">
+            </i>
+
+            <span>
+              Status: Terdaftar sebagai Pengusaha Kena Pajak
+            </span>
+
           </li>
+
         </ul>
+
       </div>
 
     </div>
+
 
     <!-- Bottom bar -->
     <div class="border-t border-white/10">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
-        <p>&copy; 2026 PT. Adijaya Multijasa Solution. Hak Cipta Dilindungi.</p>
-        <p>NPWP: 40.067.541.9-445.000</p>
+
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
+
+        <p>
+          &copy; 2026 PT. Adijaya Multijasa Solution. Hak Cipta Dilindungi.
+        </p>
+
+        <p>
+          NPWP: 40.067.541.9-445.000
+        </p>
+
       </div>
+
     </div>
+
   </footer>
 
-    <script>
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      const btn = document.getElementById('mobileMenuBtn');
-      const willOpen = menu.classList.contains('hidden');
-      menu.classList.toggle('hidden');
-      btn.setAttribute('aria-expanded', String(willOpen));
-    }
-    document.addEventListener('click', function (e) {
-      const menu = document.getElementById('mobileMenu');
-      const btn = document.getElementById('mobileMenuBtn');
-      if (!menu || !btn) return;
-      if (!menu.contains(e.target) && !btn.contains(e.target)) {
-        menu.classList.add('hidden');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
-  </script>
-  <script>lucide.createIcons();</script>
-  <script>
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    window.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.reveal-load').forEach(el => {
-        requestAnimationFrame(() => el.classList.add('show'));
-      });
+  <!-- MOBILE MENU SCRIPT -->
+  <script>
+
+    function toggleMobileMenu() {
+
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.getElementById('mobileMenuBtn');
+
+      const willOpen = menu.classList.contains('hidden');
+
+      menu.classList.toggle('hidden');
+
+      btn.setAttribute(
+        'aria-expanded',
+        String(willOpen)
+      );
+
+    }
+
+
+    document.addEventListener('click', function (e) {
+
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.getElementById('mobileMenuBtn');
+
+      if (!menu || !btn) return;
+
+      if (
+        !menu.contains(e.target) &&
+        !btn.contains(e.target)
+      ) {
+
+        menu.classList.add('hidden');
+
+        btn.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+      }
+
     });
+
   </script>
+
+
+  <!-- LUCIDE -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+
+  <!-- REVEAL ANIMATION -->
+  <script>
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add('show');
+
+            revealObserver.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.15
+      }
+    );
+
+
+    document
+      .querySelectorAll('.reveal')
+      .forEach(el => revealObserver.observe(el));
+
+
+    window.addEventListener(
+      'DOMContentLoaded',
+      () => {
+
+        document
+          .querySelectorAll('.reveal-load')
+          .forEach(el => {
+
+            requestAnimationFrame(
+              () => el.classList.add('show')
+            );
+
+          });
+
+      }
+    );
+
+  </script>
+
 </body>
 </html>

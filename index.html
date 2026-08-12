@@ -13,6 +13,15 @@
     .reveal.show { opacity: 1; transform: translateY(0); }
     .reveal-load { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease-out, transform 0.9s ease-out; }
     .reveal-load.show { opacity: 1; transform: translateY(0); }
+    @keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
   </style>
 </head>
 <body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
@@ -256,120 +265,139 @@
     </div>
   </section>
 
-  <!-- VERIFIED SECTION: Logo lembaga berjalan -->
+    <!-- VERIFIED SECTION: Logo lembaga berjalan -->
   <section class="w-full bg-white border-t border-b border-gray-100 py-5 overflow-hidden reveal">
+
     <div class="max-w-7xl mx-auto px-6 mb-3 text-center">
-      <p class="text-[12px] font-bold tracking-widest text-black uppercase">Terdaftar & Terverifikasi Pada</p>
+      <p class="text-[12px] font-bold tracking-widest text-black uppercase">
+        Terdaftar & Terverifikasi Pada
+      </p>
     </div>
-    <div class="relative overflow-hidden" style="mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);">
-      <div class="flex items-center gap-14" style="width: max-content; animation: marquee-scroll 32s linear infinite;">
+
+    <div
+      class="relative overflow-hidden"
+      style="
+        mask-image: linear-gradient(
+          to right,
+          transparent 0%,
+          black 8%,
+          black 92%,
+          transparent 100%
+        );
+        -webkit-mask-image: linear-gradient(
+          to right,
+          transparent 0%,
+          black 8%,
+          black 92%,
+          transparent 100%
+        );
+      "
+    >
+
+      <!-- CONTAINER MARQUEE -->
+      <div
+        class="flex items-center gap-14"
+        style="width: max-content; animation: marquee-scroll 32s linear infinite;"
+      >
+
+        <!-- ==================== SET PERTAMA ==================== -->
 
         <!-- OSS / BKPM -->
         <div class="flex items-center gap-2 shrink-0 h-14">
-          <svg viewBox="0 0 220 80" height="48" xmlns="http://www.w3.org/2000/svg">
-            <!-- Garuda silhouette simplified -->
-            <text x="0" y="28" font-family="serif" font-size="11" fill="#c8a400" font-weight="bold">🦅</text>
-            <line x1="36" y1="8" x2="36" y2="72" stroke="#1a3a7c" stroke-width="2"/>
-            <text x="42" y="46" font-family="Arial Black, sans-serif" font-weight="900" font-size="38" fill="#1a3a7c" letter-spacing="-1">OSS</text>
-            <text x="42" y="62" font-family="Arial, sans-serif" font-size="8" fill="#0d9488" font-weight="700" letter-spacing="0.5">KEMENTERIAN INVESTASI/BKPM</text>
-          </svg>
+          <img
+            src="image/oss.png"
+            alt="Logo OSS BKPM"
+            class="h-10 w-auto object-contain"
+          >
         </div>
 
         <!-- LPSE -->
         <div class="flex items-center shrink-0 h-14">
-          <svg viewBox="0 0 200 72" height="48" xmlns="http://www.w3.org/2000/svg">
-            <!-- 3 hexagons -->
-            <polygon points="18,4 30,4 36,14 30,24 18,24 12,14" fill="#e63329"/>
-            <polygon points="30,4 42,4 48,14 42,24 30,24 24,14" fill="#1ab0e8"/>
-            <polygon points="18,24 30,24 36,34 30,44 18,44 12,34" fill="#f5c800"/>
-            <!-- LPSE text -->
-            <text x="56" y="30" font-family="Arial Black, sans-serif" font-weight="900" font-size="26" fill="#1a237e" letter-spacing="1">LPSE</text>
-            <line x1="56" y1="34" x2="196" y2="34" stroke="#1a237e" stroke-width="1.5"/>
-            <text x="56" y="46" font-family="Arial, sans-serif" font-size="7.5" fill="#1a237e" letter-spacing="0.3">Layanan Pengadaan Secara Elektronik</text>
-          </svg>
+          <img
+            src="image/lpse.png"
+            alt="Logo LPSE"
+            class="h-10 w-auto object-contain"
+          >
         </div>
 
         <!-- LKPP -->
         <div class="flex items-center shrink-0 h-14">
-          <svg viewBox="0 0 190 72" height="48" xmlns="http://www.w3.org/2000/svg">
-            <text x="0" y="28" font-family="serif" font-size="11" fill="#c8a400">🦅</text>
-            <text x="28" y="42" font-family="Arial Black, sans-serif" font-weight="900" font-size="36" fill="#111">LK</text>
-            <text x="84" y="42" font-family="Arial Black, sans-serif" font-weight="900" font-size="36" fill="#e63329">PP</text>
-            <text x="28" y="56" font-family="Arial, sans-serif" font-size="7.5" fill="#333">Lembaga Kebijakan</text>
-            <text x="28" y="66" font-family="Arial, sans-serif" font-size="7.5" fill="#333">Pengadaan Barang/Jasa Pemerintah</text>
-          </svg>
+          <img
+            src="image/lkpp.png"
+            alt="Logo LKPP"
+            class="h-10 w-auto object-contain"
+          >
         </div>
 
         <!-- SiKaP -->
         <div class="flex items-center shrink-0 h-14">
-          <svg viewBox="0 0 130 60" height="48" xmlns="http://www.w3.org/2000/svg">
-            <!-- checkmark -->
-            <polyline points="2,22 10,30 22,12" fill="none" stroke="#f5c800" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <!-- Si -->
-            <text x="4" y="50" font-family="Arial Black, sans-serif" font-weight="900" font-size="32" fill="#1ab0e8">Si</text>
-            <!-- Ka -->
-            <text x="42" y="50" font-family="Arial Black, sans-serif" font-weight="900" font-size="32" fill="#1a237e">Ka</text>
-            <!-- P -->
-            <text x="88" y="50" font-family="Arial Black, sans-serif" font-weight="900" font-size="32" fill="#f5a800">P</text>
-          </svg>
+          <img
+            src="image/sikap.png"
+            alt="Logo SiKaP"
+            class="h-10 w-auto object-contain"
+          >
         </div>
 
         <!-- INAPROC -->
         <div class="flex items-center shrink-0 h-14">
-          <svg viewBox="0 0 200 56" height="44" xmlns="http://www.w3.org/2000/svg">
-            <text x="0" y="40" font-family="Arial Black, sans-serif" font-weight="900" font-size="34" fill="#e63329">INA</text>
-            <text x="80" y="40" font-family="Arial Black, sans-serif" font-weight="900" font-size="34" fill="#111">PROC</text>
-            <text x="0" y="54" font-family="Arial, sans-serif" font-size="10" fill="#888" letter-spacing="1">Katalog Elektronik</text>
-          </svg>
+          <img
+            src="image/inaproc.png"
+            alt="Logo INAPROC"
+            class="h-10 w-auto object-contain"
+          >
         </div>
 
-        <!-- === DUPLIKAT untuk loop seamless === -->
+
+        <!-- ==================== SET KEDUA / DUPLIKAT ==================== -->
 
         <!-- OSS / BKPM -->
         <div class="flex items-center gap-2 shrink-0 h-14">
-          <svg viewBox="0 0 220 80" height="48" xmlns="http://www.w3.org/2000/svg">
-            <text x="0" y="28" font-family="serif" font-size="11" fill="#c8a400" font-weight="bold">🦅</text>
-            <line x1="36" y1="8" x2="36" y2="72" stroke="#1a3a7c" stroke-width="2"/>
-            <text x="42" y="46" font-family="Arial Black, sans-serif" font-weight="900" font-size="38" fill="#1a3a7c" letter-spacing="-1">OSS</text>
-            <text x="42" y="62" font-family="Arial, sans-serif" font-size="8" fill="#0d9488" font-weight="700" letter-spacing="0.5">KEMENTERIAN INVESTASI/BKPM</text>
-          </svg>
+          <img
+            src="image/oss.png"
+            alt="Logo OSS BKPM"
+            class="h-10 w-auto object-contain"
+          >
         </div>
+
+        <!-- LPSE -->
         <div class="flex items-center shrink-0 h-14">
-          <svg viewBox="0 0 200 72" height="48" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="18,4 30,4 36,14 30,24 18,24 12,14" fill="#e63329"/>
-            <polygon points="30,4 42,4 48,14 42,24 30,24 24,14" fill="#1ab0e8"/>
-            <polygon points="18,24 30,24 36,34 30,44 18,44 12,34" fill="#f5c800"/>
-            <text x="56" y="30" font-family="Arial Black, sans-serif" font-weight="900" font-size="26" fill="#1a237e" letter-spacing="1">LPSE</text>
-            <line x1="56" y1="34" x2="196" y2="34" stroke="#1a237e" stroke-width="1.5"/>
-            <text x="56" y="46" font-family="Arial, sans-serif" font-size="7.5" fill="#1a237e" letter-spacing="0.3">Layanan Pengadaan Secara Elektronik</text>
-          </svg>
+          <img
+            src="image/lpse.png"
+            alt="Logo LPSE"
+            class="h-10 w-auto object-contain"
+          >
         </div>
+
+        <!-- LKPP -->
         <div class="flex items-center shrink-0 h-14">
-          <svg viewBox="0 0 190 72" height="48" xmlns="http://www.w3.org/2000/svg">
-            <text x="0" y="28" font-family="serif" font-size="11" fill="#c8a400">🦅</text>
-            <text x="28" y="42" font-family="Arial Black, sans-serif" font-weight="900" font-size="36" fill="#111">LK</text>
-            <text x="84" y="42" font-family="Arial Black, sans-serif" font-weight="900" font-size="36" fill="#e63329">PP</text>
-            <text x="28" y="56" font-family="Arial, sans-serif" font-size="7.5" fill="#333">Lembaga Kebijakan</text>
-            <text x="28" y="66" font-family="Arial, sans-serif" font-size="7.5" fill="#333">Pengadaan Barang/Jasa Pemerintah</text>
-          </svg>
+          <img
+            src="image/lkpp.png"
+            alt="Logo LKPP"
+            class="h-10 w-auto object-contain"
+          >
         </div>
+
+        <!-- SiKaP -->
         <div class="flex items-center shrink-0 h-14">
-          <svg viewBox="0 0 130 60" height="48" xmlns="http://www.w3.org/2000/svg">
-            <polyline points="2,22 10,30 22,12" fill="none" stroke="#f5c800" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="4" y="50" font-family="Arial Black, sans-serif" font-weight="900" font-size="32" fill="#1ab0e8">Si</text>
-            <text x="42" y="50" font-family="Arial Black, sans-serif" font-weight="900" font-size="32" fill="#1a237e">Ka</text>
-            <text x="88" y="50" font-family="Arial Black, sans-serif" font-weight="900" font-size="32" fill="#f5a800">P</text>
-          </svg>
+          <img
+            src="image/sikap.png"
+            alt="Logo SiKaP"
+            class="h-10 w-auto object-contain"
+          >
         </div>
+
+        <!-- INAPROC -->
         <div class="flex items-center shrink-0 h-14">
-          <svg viewBox="0 0 200 56" height="44" xmlns="http://www.w3.org/2000/svg">
-            <text x="0" y="40" font-family="Arial Black, sans-serif" font-weight="900" font-size="34" fill="#e63329">INA</text>
-            <text x="80" y="40" font-family="Arial Black, sans-serif" font-weight="900" font-size="34" fill="#111">PROC</text>
-            <text x="0" y="54" font-family="Arial, sans-serif" font-size="10" fill="#888" letter-spacing="1">Katalog Elektronik</text>
-          </svg>
+          <img
+            src="image/inaproc.png"
+            alt="Logo INAPROC"
+            class="h-10 w-auto object-contain"
+          >
         </div>
 
       </div>
+      <!-- END CONTAINER MARQUEE -->
+
     </div>
   </section>
   <style>

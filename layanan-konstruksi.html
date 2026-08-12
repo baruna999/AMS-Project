@@ -9,6 +9,8 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
     .reveal-load { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease-out, transform 0.9s ease-out; }
     .reveal-load.show { opacity: 1; transform: translateY(0); }
   </style>
@@ -76,35 +78,37 @@
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
 
       <!-- Konten Utama -->
-      <div class="lg:col-span-2 space-y-8 reveal-load">
-        <div>
+      <div class="lg:col-span-2 space-y-8">
+        <div class="reveal-load">
           <h2 class="text-2xl font-bold text-gray-900 mb-4">Tentang Layanan Ini</h2>
           <p class="text-gray-600 leading-relaxed">Kami menangani proyek konstruksi secara menyeluruh mulai dari perencanaan, perijinan, pelaksanaan pembangunan, hingga serah terima kunci kepada klien. Dengan pengalaman lebih dari 20 tahun, tim kami siap menghadirkan bangunan berkualitas tinggi sesuai standar dan anggaran yang disepakati.</p>
         </div>
 
         <div>
+          <div class="flex items-center justify-between mb-4 reveal-load">
           <h3 class="text-lg font-bold text-gray-900 mb-4">Layanan yang Kami Sediakan</h3>
+          </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100">
+            <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100 reveal-load">
               <div class="w-8 h-8 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center shrink-0"><i data-lucide="hammer" class="w-4 h-4"></i></div>
               <div><p class="font-semibold text-gray-900 text-sm">Renovasi Bangunan</p><p class="text-xs text-gray-500 mt-0.5">Pembaruan dan perbaikan struktur bangunan lama</p></div>
             </div>
-            <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100">
+            <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100 reveal-load">
               <div class="w-8 h-8 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center shrink-0"><i data-lucide="building" class="w-4 h-4"></i></div>
               <div><p class="font-semibold text-gray-900 text-sm">Pembangunan Baru</p><p class="text-xs text-gray-500 mt-0.5">Dari Bowplank s.d. Serah Terima Kunci</p></div>
             </div>
-            <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100">
+            <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100 reveal">
               <div class="w-8 h-8 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center shrink-0"><i data-lucide="clipboard-check" class="w-4 h-4"></i></div>
               <div><p class="font-semibold text-gray-900 text-sm">Manajemen Proyek</p><p class="text-xs text-gray-500 mt-0.5">Pengawasan dan koordinasi seluruh tahap</p></div>
             </div>
-            <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100">
+            <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100 reveal">
               <div class="w-8 h-8 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center shrink-0"><i data-lucide="file-text" class="w-4 h-4"></i></div>
               <div><p class="font-semibold text-gray-900 text-sm">Pengurusan Perijinan</p><p class="text-xs text-gray-500 mt-0.5">IMB dan dokumen perijinan bangunan</p></div>
             </div>
           </div>
         </div>
 
-        <div>
+        <div class="reveal">
           <h3 class="text-lg font-bold text-gray-900 mb-4">Alur Pengerjaan</h3>
           <div class="flex flex-wrap items-center gap-2">
             <span class="px-3 py-1.5 bg-[#0d9488]/10 text-[#0d9488] text-xs font-semibold rounded-full">Survey</span>
@@ -138,7 +142,7 @@
 
   <!-- FOOTER -->
   <footer class="bg-[#0b1f26] text-gray-300 mt-auto">
-    <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-10">
+    <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-10 reveal">
 
       <!-- Kolom 1: Brand & tagline -->
       <div class="space-y-4 lg:col-span-3">
@@ -237,6 +241,17 @@
     window.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.reveal-load').forEach(el => requestAnimationFrame(() => el.classList.add('show')));
     });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   </script>
 </body>
 </html>

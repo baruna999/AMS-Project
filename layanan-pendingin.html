@@ -6,7 +6,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
-  <style>body{font-family:'Plus Jakarta Sans',sans-serif;}.reveal-load{opacity:0;transform:translateY(24px);transition:opacity .9s ease-out,transform .9s ease-out;}.reveal-load.show{opacity:1;transform:translateY(0);}</style>
+  <style>
+    body{font-family:'Plus Jakarta Sans',sans-serif;}
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    .reveal-load { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease-out, transform 0.9s ease-out; }
+    .reveal-load.show { opacity: 1; transform: translateY(0); }
+  </style>
 </head>
 <body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
   <!-- NAVBAR -->
@@ -67,13 +73,51 @@
         <div>
           <h3 class="text-lg font-bold text-gray-900 mb-4">Layanan yang Kami Sediakan</h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100"><div class="w-8 h-8 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center shrink-0"><i data-lucide="wind" class="w-4 h-4"></i></div><div><p class="font-semibold text-gray-900 text-sm">Instalasi AC</p><p class="text-xs text-gray-500 mt-0.5">Pemasangan AC baru berbagai kapasitas</p></div></div>
-            <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100"><div class="w-8 h-8 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center shrink-0"><i data-lucide="settings" class="w-4 h-4"></i></div><div><p class="font-semibold text-gray-900 text-sm">Perawatan Berkala</p><p class="text-xs text-gray-500 mt-0.5">Service rutin & pembersihan unit AC</p></div></div>
-            <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100"><div class="w-8 h-8 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center shrink-0"><i data-lucide="tool" class="w-4 h-4"></i></div><div><p class="font-semibold text-gray-900 text-sm">Perbaikan & Servis</p><p class="text-xs text-gray-500 mt-0.5">Diagnosa dan perbaikan kerusakan AC</p></div></div>
-            <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100"><div class="w-8 h-8 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center shrink-0"><i data-lucide="pipette" class="w-4 h-4"></i></div><div><p class="font-semibold text-gray-900 text-sm">Instalasi Ducting & Pipa</p><p class="text-xs text-gray-500 mt-0.5">Pemasangan ducting & pipa refrigeran</p></div></div>
+          <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100">
+            <div class="w-8 h-8 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center shrink-0">
+              <i data-lucide="wind" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Instalasi AC</p>
+              <p class="text-xs text-gray-500 mt-0.5">Pemasangan AC baru berbagai kapasitas</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100">
+            <div class="w-8 h-8 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center shrink-0">
+              <i data-lucide="settings" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Perawatan Berkala</p>
+              <p class="text-xs text-gray-500 mt-0.5">Service rutin & pembersihan unit AC</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100">
+            <div class="w-8 h-8 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center shrink-0">
+              <i data-lucide="tool" class="w-4 h-4"></i>
+            </div>
+            <div class="reveal">
+              <p class="font-semibold text-gray-900 text-sm">Perbaikan & Servis</p>
+              <p class="text-xs text-gray-500 mt-0.5">Diagnosa dan perbaikan kerusakan AC</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100">
+            <div class="w-8 h-8 bg-[#0d9488]/10 text-[#0d9488] rounded-lg flex items-center justify-center shrink-0">
+              <i data-lucide="pipette" class="w-4 h-4"></i>
+            </div>
+            <div class="reveal">
+              <p class="font-semibold text-gray-900 text-sm">Instalasi Ducting & Pipa</p>
+              <p class="text-xs text-gray-500 mt-0.5">Pemasangan ducting & pipa refrigeran</p>
+            </div>
           </div>
         </div>
-        <div><h3 class="text-lg font-bold text-gray-900 mb-3">Cakupan</h3><p class="text-gray-500 text-sm leading-relaxed">Untuk hunian & non-hunian, termasuk pekerjaan pipa dan lembaran logam (plat baja, aluminium). Melayani area Bandung dan sekitarnya.</p></div>
+        </div>
+        <div class="reveal">
+          <h3 class="text-lg font-bold text-gray-900 mb-3">Cakupan</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Untuk hunian & non-hunian, termasuk pekerjaan pipa dan lembaran logam (plat baja, aluminium). Melayani area Bandung dan sekitarnya.</p>
+        </div>
       </div>
       <div class="space-y-6 reveal-load">
         <div class="border border-gray-100 rounded-2xl p-6 space-y-3">
@@ -89,7 +133,7 @@
 
   <!-- FOOTER -->
   <footer class="bg-[#0b1f26] text-gray-300 mt-auto">
-    <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-10">
+    <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-10 reveal">
 
       <!-- Kolom 1: Brand & tagline -->
       <div class="space-y-4 lg:col-span-3">
@@ -200,6 +244,22 @@
       }
     });
     window.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.reveal-load').forEach(el=>requestAnimationFrame(()=>el.classList.add('show')));});
+  </script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.reveal-load').forEach(el => requestAnimationFrame(() => el.classList.add('show')));
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   </script>
 </body>
 </html>
